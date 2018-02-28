@@ -1,0 +1,11 @@
+.confirm-button{
+  background-color: yellow;
+  border-radius: 10px;
+  width: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.confirm-button:hover{
+  background-color: red;
+}
