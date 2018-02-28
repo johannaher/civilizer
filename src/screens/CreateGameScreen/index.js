@@ -11,13 +11,12 @@ class App extends Component {
           <img src={logo} className="TestImage" alt="logo"/>
           <img src={logo} className="TestImage" alt="logo"/>
 
-          <TableComponent label="hej">
+          <TableComponent label="hej på dig johanna">
             <p> JOhanaHANSD </p><p> 23948</p>
           </TableComponent>
       </GridContainer>
     );
   }
 }
-
 
 export default App;
