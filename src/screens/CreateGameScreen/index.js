@@ -11,6 +11,8 @@ class App extends Component {
         <p>player 1:2</p>
         <p>player 2:1</p>
         <p>player 2:2</p>
+        <img src={logo} className = "TestImage" alt="logo"/>
+        <img src={logo} className = "TestImage" alt="logo"/>
       </GridContainer>
     );
   }
