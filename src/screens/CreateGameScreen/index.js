@@ -10,20 +10,8 @@ export default class CreateGameScreen extends Component {
     return (
       <GridContainer>
 
-        <div className = "header-container">
-          <h1>HEADER</h1>
-        </div>
+        <ButtonComponent></ButtonComponent>
 
-        <div className = "center-container">
-          <div className = "ButtonComponent" label = "CIVILIZE"></div>
-          <Tables>
-            <p> JOhanaHANSD </p>
-          </Tables>
-        </div>
-
-        <div className = "footer-container">
-          <h1>FOOTER</h1>
-        </div>
       </GridContainer>
     );
   }

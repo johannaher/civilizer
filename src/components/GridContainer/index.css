@@ -6,11 +6,17 @@
   grid-template-rows: 20% 60% 20%;
 }
 
+.center-container{
+  grid-column: 2;
+  background-color: #f3f3f3;
+}
+
 .header-container{
   grid-column: 1 / 4;
   grid-row: 1;
-  background-color: black;
   color: #dda833;
+  background-color: black;
+  text-align: center;
 }
 
 .footer-container{
@@ -18,9 +24,5 @@
   grid-row: 3;
   background-color: black;
   color: #dda833;
-}
-
-.center-container{
-  grid-column: 2;
-  background-color: #f3f3f3;
+  text-align: center;
 }
