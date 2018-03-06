@@ -2,6 +2,7 @@
   content: url(../../assets/icons/user.png);
   max-width: 100px;
   width: 20%;
+  min-width: 60px;
 }
 
 .player-container{
@@ -13,4 +14,6 @@
   box-shadow: 0 0 0 2px rgba(0, 0, 0, .2) inset;
   transition-property: color, box-shadow, border-color, background-color, opacity, -webkit-box-shadow;
   transition-duration: 0.25s;
+  width: 100%;
+  max-width: 100px;
 }

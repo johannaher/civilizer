@@ -5,8 +5,11 @@ export default class GridContainer extends Component {
   render() {
     return (
       <div className = "grid-container">
+
         <div className = "header-container">
-          <h1>HEADER</h1>
+          <a href = "/">
+            <h1>CIVILIZER</h1>
+          </a>
         </div>
 
         <div className = "center-container">
@@ -14,7 +17,7 @@ export default class GridContainer extends Component {
         </div>
 
         <div className = "footer-container">
-          <h1>FOOTER</h1>
+          <p>THE UNOFFICIAL CIV6 GAME SETUP TOOL</p>
         </div>
       </div>
     );
