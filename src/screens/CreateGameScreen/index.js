@@ -11,7 +11,7 @@ export default class CreateGameScreen extends Component {
       <GridContainer>
 
         <ButtonComponent></ButtonComponent>
-
+        <Tables/>
       </GridContainer>
     );
   }
