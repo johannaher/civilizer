@@ -1,0 +1,20 @@
+.user-img{
+  content: url(../../assets/icons/user.png);
+  height: 100px;
+}
+
+.user-id{
+
+}
+
+.player-container{
+  background-color: #AEA993;
+  width: 15%;
+  height: auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, .2) inset;
+  transition-property: color, box-shadow, border-color, background-color, opacity, -webkit-box-shadow;
+  transition-duration: 0.25s;
+}

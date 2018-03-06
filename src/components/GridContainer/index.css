@@ -9,6 +9,7 @@
 .center-container{
   grid-column: 2;
   background-color: #f3f3f3;
+  padding: 20px;
 }
 
 .header-container{
