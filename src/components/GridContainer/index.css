@@ -10,6 +10,7 @@
   grid-column: 2;
   background-color: #f3f3f3;
   padding: 20px;
+  grid-template-columns: 1;
 }
 
 .header-container{
