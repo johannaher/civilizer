@@ -9,10 +9,21 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <GridContainer>
-        <PlayerContainer>"player.name"</PlayerContainer>
-        <ButtonComponent label = "New Game"></ButtonComponent>
-        <Scoreboard/>
+
+        <div className = "home-container">
+
+          <PlayerContainer>"player.name"</PlayerContainer>
+
+          <a href = "/creategamescreen">
+            <ButtonComponent label = "New Game"></ButtonComponent>
+          </a>
+
+          <Scoreboard/>
+
+        </div>
+
       </GridContainer>
+      
     );
   }
 }

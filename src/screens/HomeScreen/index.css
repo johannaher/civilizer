@@ -1,0 +1,5 @@
+.home-container{
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-auto-columns: ;
+}

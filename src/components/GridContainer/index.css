@@ -23,6 +23,11 @@
   text-align: center;
 }
 
+.header-container a{
+  color: inherit;
+  text-decoration: none;
+}
+
 .footer-container{
   grid-column: 1 / 4;
   grid-row: 3;
