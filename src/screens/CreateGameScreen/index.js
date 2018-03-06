@@ -15,7 +15,7 @@ export default class CreateGameScreen extends Component {
         </div>
 
         <div className = "center-container">
-          <div className = "ButtonComponent"></div>
+          <div className = "ButtonComponent" label = "CIVILIZE"></div>
           <Tables>
             <p> JOhanaHANSD </p>
           </Tables>

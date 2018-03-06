@@ -7,7 +7,7 @@ export default class ButtonComponent extends Component{
       <div className="table-grid">
 
         <div className="grid-item">
-          {this.props.label}
+          {this.props.children}
         </div>
       </div>
     )

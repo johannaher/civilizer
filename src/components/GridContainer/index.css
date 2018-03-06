@@ -9,13 +9,15 @@
 .header-container{
   grid-column: 1 / 4;
   grid-row: 1;
-  background-color: red;
+  background-color: black;
+  color: #dda833;
 }
 
 .footer-container{
   grid-column: 1 / 4;
   grid-row: 3;
-  background-color: blue;
+  background-color: black;
+  color: #dda833;
 }
 
 .center-container{
