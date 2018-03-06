@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import './index.css';
+import civilizationList from '../Mockobject/Mockobject.js';
 
 export default class ButtonComponent extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      civilizationList: civilizationList
+    }
+  }
   render(){
     return(
-      <div className="table-grid">
-
-        <div className="grid-item">
-          {this.props.children}
-        </div>
-      </div>
+      this.state.civilizationList.map((civ)=>{
+        <p>{civ.name}</p>
+      })
     )
   }
 }
