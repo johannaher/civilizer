@@ -8,14 +8,36 @@
   border-collapse: collapse;
 }
 
-#id{
-  width:3%;
-}
-
 #leader{
-  width: 50%;
+  width: 30%;
 }
 
 #civilization{
-  width: 47%;
+  width: 30%;
+}
+
+input[type="checkbox"] {
+   position: absolute; opacity: 0; z-index: -1;
+   color: #000;
+ }
+
+input[type="checkbox"]:before {
+  font: 16pt FontAwesome;
+  content: '\00f096';
+  display: inline-block;
+  width: 16pt;
+  padding: 2px 0 0 3px;
+  margin-right: 0.5em;
+}
+input[type="checkbox"]:checked:before {
+  content: '\00f046';
+}
+input[type="checkbox"]:focus:before {
+  outline: 1px dotted #aaa;
+}
+input[type="checkbox"]:disabled {
+  color: #999;
+}
+input[type="checkbox"]:not(:disabled):hover:before {
+  text-shadow: 0 1px 2px #77F;
 }

@@ -4,15 +4,16 @@ import GridContainer from '../../components/GridContainer'
 import style from './index.css'
 import Tables from '../../components/Tables'
 import ButtonComponent from '../../components/Buttons'
+import GamePlayersContainer from '../../components/GamePlayersContainer'
 
 export default class CreateGameScreen extends Component {
   render() {
     return (
       <GridContainer>
-
-        <ButtonComponent></ButtonComponent>
+        <GamePlayersContainer></GamePlayersContainer>
         <Tables/>
-      </GridContainer>
+        <ButtonComponent label="CIVILIZE"></ButtonComponent>
+        </GridContainer>
     );
   }
 }
