@@ -4,8 +4,10 @@ import './index.css';
 export default class ButtonComponent extends Component{
   render(){
     return(
-      <div className = "confirm-button">
-        {this.props.label}
+      <div className="buttonContainer">
+        <div className = "confirm-button">
+          {this.props.label}
+        </div>
       </div>
     )
   }

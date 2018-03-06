@@ -1,12 +1,9 @@
-a{
-	font-weight: 100;
+.confirm-button{
+    font-weight: 100;
     letter-spacing: 2px;
     text-transform: uppercase;
     vertical-align: middle;
     text-align: center;
-}
-
-.confirm-button{
     padding: 10px 25px;
     display: inline-block;
     cursor: pointer;
@@ -17,4 +14,14 @@ a{
     transition-duration: 0.25s;
     color: #232323;
     background-color: #dda833;
+}
+
+.confirm-button:hover{
+  background-color: red;
+}
+
+.buttonContainer{
+  text-align:center;
+  padding: 20px 0;
+
 }
