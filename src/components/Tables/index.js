@@ -14,7 +14,7 @@ export default class ButtonComponent extends Component{
     return(
       <table className="civ-table">
         {this.state.civilizationList.map((civ)=>{
-          return <tr> <td id="id">{civ.id}</td> <td id="civilization"> {civ.civilization} </td> <td id="leader">{civ.leader} </td></tr>
+          return <tr> <td id="civilization"> {civ.civilization} </td> <td id="leader">{civ.leader} </td></tr>
         })}
       </table>
     )
