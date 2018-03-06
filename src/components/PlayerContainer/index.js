@@ -6,7 +6,7 @@ export default class PlayerContainer extends Component {
     return (
       <div className = "player-container">
 
-        <img className = "user-img" src = "../../assets/icons/player.png)">
+        <img className = "user-img"/>
 
         <div className = "user-id">
           {this.props.children}
