@@ -9,7 +9,7 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <GridContainer>
-        <PlayerContainer/>
+        <PlayerContainer>"player.name"</PlayerContainer>
         <ButtonComponent label = "New Game"></ButtonComponent>
         <Scoreboard/>
       </GridContainer>

@@ -16,16 +16,15 @@ export default class Scoreboard extends Component {
 
     return (
       <div className = "grid-scoreboard">
-
-          {this.state.scoreList.map((player,index)=>{
-            return(
-              <div className = "scoreboard-item">
-                <p>#{index + 1}</p>
-                <p>{player.name}</p>
-                <p>{player.avgScore}</p>
-              </div>
-              )
-          })}
+        {this.state.scoreList.map((player,index)=>{
+          return(
+            <div className = "scoreboard-item">
+              <p>#{index + 1}</p>
+              <p><img className = "user-img" alt = "player.name"/><br/>{player.name}</p>
+              <p>{player.avgScore}</p>
+            </div>
+            )
+        })}
       </div>
     );
   }

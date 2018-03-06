@@ -1,10 +1,7 @@
 .user-img{
   content: url(../../assets/icons/user.png);
-  height: 100px;
-}
-
-.user-id{
-
+  max-width: 100px;
+  width: 10%;
 }
 
 .player-container{

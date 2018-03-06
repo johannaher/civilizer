@@ -7,10 +7,7 @@ export default class PlayerContainer extends Component {
       <div className = "player-container">
 
         <img className = "user-img"/>
-
-        <div className = "user-id">
-          {this.props.children}
-        </div>
+        <p>{this.props.children}</p>
 
       </div>
 
