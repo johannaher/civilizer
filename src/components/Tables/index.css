@@ -1,4 +1,21 @@
 .list-civ{
-  background-color: pink;
   list-style-type: none;
+  background-color: pink;
+}
+
+.civ-table{
+  width:100%;
+  border-collapse: collapse;
+}
+
+#id{
+  width:3%;
+}
+
+#leader{
+  width: 50%;
+}
+
+#civilization{
+  width: 47%;
 }
