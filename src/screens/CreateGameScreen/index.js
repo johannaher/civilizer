@@ -2,21 +2,29 @@ import React, { Component } from 'react'
 import logo from '../../assets/icons/logo.svg'
 import GridContainer from '../../components/GridContainer'
 import style from './index.css'
-import TableComponent from '../../components/Tables/TableComponent.js'
+import Tables from '../../components/Tables'
+import ButtonComponent from '../../components/Buttons'
 
-class App extends Component {
+export default class CreateGameScreen extends Component {
   render() {
     return (
       <GridContainer>
-          <img src={logo} className="TestImage" alt="logo"/>
-          <img src={logo} className="TestImage" alt="logo"/>
 
-          <TableComponent label="hej på dig johanna">
-            <p> JOhanaHANSD </p><p> 23948</p>
-          </TableComponent>
+        <div className = "header-container">
+          <h1>HEADER</h1>
+        </div>
+
+        <div className = "center-container">
+          <div className = "ButtonComponent"></div>
+          <Tables>
+            <p> JOhanaHANSD </p>
+          </Tables>
+        </div>
+
+        <div className = "footer-container">
+          <h1>FOOTER</h1>
+        </div>
       </GridContainer>
     );
   }
 }
-
-export default App;
