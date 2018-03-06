@@ -12,11 +12,18 @@ export default class ButtonComponent extends Component{
   render(){
     console.log(this.state)
     return(
-      <div className="table-grid">
+      <table className="civ-table">
         {this.state.civilizationList.map((civ)=>{
-          return <li className="list-civ">{civ.leader}</li>
+          return <tr> <td id="civilization"> {civ.civilization} </td> <td id="leader">{civ.leader} </td></tr>
         })}
-      </div>
+      </table>
     )
   }
 }
+
+
+/*<div className="table-grid">
+  {this.state.civilizationList.map((civ)=>{
+    return <li className="list-civ">{civ.id} {civ.civilization} {civ.leader}</li>
+  })}
+</div>*/
