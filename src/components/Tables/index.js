@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
-import civilizationList from '../Mockobject/Mockobject.js';
+import civilizationList from '../Mockobject';
 
 export default class ButtonComponent extends Component{
   constructor(props){
@@ -10,10 +10,13 @@ export default class ButtonComponent extends Component{
     }
   }
   render(){
+    console.log(this.state)
     return(
-      this.state.civilizationList.map((civ)=>{
-        <p>{civ.name}</p>
-      })
+      <div className="table-grid">
+        {this.state.civilizationList.map((civ)=>{
+          return <li className="list-civ">{civ.leader}</li>
+        })}
+      </div>
     )
   }
 }

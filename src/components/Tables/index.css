@@ -1,11 +1,4 @@
-.table-grid{
-  display: grid;
-	grid-template-columns: 75% 25%;
-	grid-template-rows: 50px;
-}
-
-.grid-item{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.list-civ{
+  background-color: pink;
+  list-style-type: none;
 }
