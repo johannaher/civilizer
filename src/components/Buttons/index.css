@@ -1,10 +1,11 @@
 .confirm-button{
+    font-size: 35px;
     font-weight: 100;
     letter-spacing: 2px;
     text-transform: uppercase;
     vertical-align: middle;
     text-align: center;
-    padding: 10px 25px;
+    padding: 20px 50px;
     display: inline-block;
     cursor: pointer;
     border-radius: 1px;
@@ -17,11 +18,11 @@
 }
 
 .confirm-button:hover{
-  background-color: red;
+  background-color: #b5280b;
+  border: 3px solid #b5280b;
 }
 
 .buttonContainer{
   text-align:center;
   padding: 20px 0;
-
 }

@@ -12,11 +12,14 @@ export default class TableComponents extends Component{
   render(){
     console.log(this.state)
     return(
+
       <table className="civ-table">
         {this.state.civilizationList.map((civ)=>{
           return <tr>
-            <td id="civilization"> {civ.civilization} </td>
+            <td id="icon"><img class="civ-icon" src="https://d1u5p3l4wpay3k.cloudfront.net/civ6_gamepedia_en/f/f1/Icon_district_hansa.png?version=76007f5cbcad2c226eae842c5ad1300e"/></td>
             <td id="leader">{civ.leader}</td>
+            <td id="civilization"> {civ.civilization} </td>
+            <td id="ability"></td>
             <td>
               <label class="checkbox-container">
                   <input type="checkbox"/>

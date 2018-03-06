@@ -1,13 +1,29 @@
 .civ-table{
   width:100%;
   border-collapse: collapse;
+  height: 400px;
+  margin-top: 30px;
+  border: 1px solid #aaa;
+  font-size: 18px;
+}
+
+#icon{
+  width: 5%;
+}
+
+.civ-icon{
+  width:100%;
+}
+
+#civilization{
+  width: 30%;
 }
 
 #leader{
   width: 30%;
 }
 
-#civilization{
+#ability{
   width: 30%;
 }
 
@@ -15,7 +31,7 @@
     display: block;
     position: relative;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 40px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
