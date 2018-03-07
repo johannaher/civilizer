@@ -18,8 +18,9 @@
 }
 
 .confirm-button:hover{
-  background-color: #b5280b;
-  border: 9px solid #b5280b;
+  background-color: #9A150E;
+  border: 9px solid #9A150E;
+  color: white;
 }
 
 .buttonContainer{
