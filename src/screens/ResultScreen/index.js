@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import logo from '../../assets/icons/logo.svg'
 import GridContainer from '../../components/GridContainer'
 import style from './index.css'
 import Tables from '../../components/Tables'
@@ -10,9 +9,9 @@ import Header from '../../components/Headers'
 export default class CreateGameScreen extends Component {
   render() {
     return (
-        <GridContainer>
-          <p>Results</p>
-        </GridContainer>
+      <GridContainer>
+        <p>Results</p>
+      </GridContainer>
     );
   }
 }
