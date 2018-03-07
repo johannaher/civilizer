@@ -1,6 +1,6 @@
 .grid-scoreboard{
   display: grid;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
   grid-row-gap: 1px;
   background-color: #aaa;
   padding: 1px;
@@ -13,8 +13,4 @@
   color: #dda833;
   text-align: center;
   background-color: #f3f3f3;
-}
-
-.scoreboard-item p{
-  font-size: 1.2em;
 }
