@@ -14,7 +14,9 @@ export default class CreateGameScreen extends Component {
           <GamePlayersContainer/>
           <Header label="Choose Civilizations"/>
           <Tables/>
-          <ButtonComponent label="CIVILIZE"/>
+          <a href = "Results">
+            <ButtonComponent label="CIVILIZE"/>
+          </a>
         </GridContainer>
     );
   }
