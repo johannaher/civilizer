@@ -7,6 +7,10 @@
   font-size: 18px;
 }
 
+tr{
+  border: 1px solid #aaa;
+}
+
 #icon{
   width: 5%;
 }
@@ -17,6 +21,7 @@
 
 #civilization{
   width: 30%;
+  text-transform: uppercase;
 }
 
 #leader{
@@ -25,6 +30,10 @@
 
 #ability{
   width: 30%;
+}
+
+#checkbox{
+  width:5%;
 }
 
 .checkbox-container {
@@ -36,4 +45,8 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+input[type=checkbox] {
+  transform: scale(2);
 }
