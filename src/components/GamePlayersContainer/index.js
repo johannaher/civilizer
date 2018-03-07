@@ -31,7 +31,7 @@ export default class GamePlayersContainer extends Component {
       <div className = "player-grid">
         {this.state.scoreList.map((player,index)=>{
           return(
-            <PlayerContainer><p>{player.name}</p></PlayerContainer>
+            <PlayerContainer><img className = "user-img" src={player.imgUrl}/><p>{player.name}</p></PlayerContainer>
           )
         })}
         {this.props.children}

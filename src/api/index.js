@@ -8,3 +8,10 @@ export const users = (callback) =>{
     callback(res.data)
   })
 }
+
+export const highScores = (callback) =>{
+  axios.get(url + '/scores/high').then((res) => {
+    console.log("REs ", res)
+    callback(res.data)
+  })
+}

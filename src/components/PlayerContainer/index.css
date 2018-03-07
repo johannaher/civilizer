@@ -1,8 +1,13 @@
 .user-img{
-  content: url(../../assets/icons/user.png);
+  width: 100%;
   max-width: 100px;
-  width: 20%;
   min-width: 60px;
+  max-height: 100px;
+  min-height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: contain;
+  background-color: black;
 }
 
 .player-container p{
