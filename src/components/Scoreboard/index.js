@@ -1,13 +1,25 @@
 import React, { Component } from 'react'
 import Style from "./index.css"
-import scoreList from "../MockScore"
+import { highScores } from '../../api'
 
 export default class Scoreboard extends Component {
 
   constructor(props){
     super(props)
     this.state = {
-      scoreList: scoreList
+      scoreList: [],
+    }
+  }
+
+  componentWillMount(props){
+    highScores(this.setHighScores.bind(this))
+  }
+
+  setHighScores(data){
+    if(data.success){
+      this.setState({scoreList: data.scores})
+    } else {
+      console.log("Didn't get any highscores ", data.message)
     }
   }
 
@@ -16,12 +28,13 @@ export default class Scoreboard extends Component {
 
     return (
       <div className = "grid-scoreboard">
-        {this.state.scoreList.map((player,index)=>{
+        {this.state.scoreList.map((highScore,index)=>{
           return(
             <div className = "scoreboard-item">
               <p>#{index + 1}</p>
-              <p><img className = "user-img" alt = "player.name"/><br/>{player.name}</p>
-              <p>{player.avgScore}</p>
+              <p><img className = "user-img" src={highScore.imgUrl}/>
+              <br/>{highScore.name}</p>
+              <p>{highScore.score}</p>
             </div>
             )
         })}
