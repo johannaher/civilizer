@@ -5,6 +5,10 @@
   min-width: 60px;
 }
 
+.player-container p{
+  font-size: 1em;
+}
+
 .player-container{
   background-color: #AEA993;
   height: auto;

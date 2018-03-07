@@ -10,12 +10,12 @@ import Header from '../../components/Headers'
 export default class CreateGameScreen extends Component {
   render() {
     return (
-      <GridContainer>
-        <GamePlayersContainer></GamePlayersContainer>
-        <Header label="Choose Civilizations"/>
-        <Tables/>
-        <ButtonComponent label="CIVILIZE"/>
-      </GridContainer>
+        <GridContainer>
+          <GamePlayersContainer/>
+          <Header label="Choose Civilizations"/>
+          <Tables/>
+          <ButtonComponent label="CIVILIZE"/>
+        </GridContainer>
     );
   }
 }
