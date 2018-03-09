@@ -11,10 +11,19 @@ export default class PlayerContainer extends Component {
   }
 
   selectUser(){
-    if(checkbox.checked){
-      
+    if(userCheckbox.checked){
+      props.selectedUsers.put(this.state.user)
+    } else {
+      props.selectedUsers.splice(this.state.user, 1)
     }
   }
+
+  userCheckbox = (
+    <label class="checkbox-container">
+        <input type="checkbox" onClick = "selectUser()"/>
+        <span></span>
+    </label>
+  );
 
   render() {
     return (
@@ -23,10 +32,7 @@ export default class PlayerContainer extends Component {
         <p><img className = "user-img" src={this.props.user.imgUrl}/>
         <p>{this.props.user.name}</p></p>
 
-        <label class="checkbox-container" id = "checkbox-user">
-            <input type="checkbox"/>
-            <span></span>
-        </label>
+        <userCheckbox/>
 
       </div>
 
