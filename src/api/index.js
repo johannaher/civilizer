@@ -27,3 +27,10 @@ export const login = ( name, password, callback ) => {
     callback(res.data)
   })
 }
+
+export const civilizations = (callback) =>{
+  axios.get(url + '/civilizations').then((res) => {
+    console.log("REs ", res)
+    callback(res.data)
+  })
+}
