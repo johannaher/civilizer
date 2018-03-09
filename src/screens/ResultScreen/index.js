@@ -34,12 +34,14 @@ export default class CreateGameScreen extends Component {
       <GridContainer>
         <div className = "grid-Scoreboard">
           {this.state.civilizationList.map((civilization)=>{
-            <div className = "scoreboard-item">
-              return (
+            return (
+              <div className = "scoreboard-item">
+
                 <p>{civilization.leader}</p>
                 <p>{civilization.civilization}</p>
-              )
-            </div>
+              </div>
+
+            )
           })}
         </div>
       </GridContainer>
