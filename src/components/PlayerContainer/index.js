@@ -10,20 +10,12 @@ export default class PlayerContainer extends Component {
     }
   }
 
-  selectUser(){
-    if(checkbox.checked){
-      
-    }
-  }
 
   render() {
     return (
       <div className = "player-container">
 
-        <p><img className = "user-img" src={this.props.user.imgUrl}/>
-        <p>{this.props.user.name}</p></p>
-
-        <label class="checkbox-container" id = "checkbox-user">
+        <label className="checkbox-container" id = "checkbox-user">
             <input type="checkbox"/>
             <span></span>
         </label>

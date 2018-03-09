@@ -41,8 +41,11 @@ export default class LoginScreen extends Component {
 
   handleLoginResponse(res){
     if(res.success){
-      sessionStorage.setItem('token', res.token);
-      sessionStorage.setItem('isLoggedIn', true);
+      sessionStorage.setItem('token', res.token)
+      sessionStorage.setItem('isLoggedIn', true)
+      sessionStorage.setItem('name', res.name)
+      sessionStorage.setItem('id', res.id)
+      sessionStorage.setItem('imgUrl', res.imgUrl)
     } else {
       this.setState({dbError: res.message})
     }
