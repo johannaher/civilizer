@@ -18,22 +18,5 @@ const App = () => (
     </Router>
   )
 
-
-const handleRoute = (routeComponent) => {
-  if(sessionStorage.isLoggedIn){
-    return routeComponent
-  } else {
-    return <Redirect to='/LoginScreen'/>
-  }
-}
-
-const handleLoginRoute = (routeComponent) => {
-  if(sessionStorage.isLoggedIn){
-    return <Redirect to='/'/>
-  } else {
-    return routeComponent
-  }
-}
-
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
