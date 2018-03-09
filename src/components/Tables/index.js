@@ -10,10 +10,10 @@ export default class TableComponents extends Component{
       <table className="civ-table">
         {this.props.civilizationList.map((civ)=>{
           return <tr>
-            <td id="icon"><img class="civ-icon" src="https://d1u5p3l4wpay3k.cloudfront.net/civ6_gamepedia_en/f/f1/Icon_district_hansa.png?version=76007f5cbcad2c226eae842c5ad1300e"/></td>
+            <td id="icon"><img class="civ-icon" src="civ.leaderImg"/></td>
             <td id="leader">{civ.leader}</td>
             <td id="civilization"> {civ.civilization} </td>
-            <td id="ability">(founding father ex)</td>
+            <td id="ability"> {civ.iconImg}</td>
             <td id="checkbox">
               <label class="checkbox-container">
                   <input type="checkbox"/>
