@@ -18,14 +18,13 @@ export default class CreateGameScreen extends Component {
       userList: [],
       result: [],
     }
+
+    this.setSelectedUser = this.setSelectedUser.bind(this)
   }
 
   componentWillMount(props){
     civilizations(this.setCivilizationList.bind(this))
     users(this.setUserList.bind(this))
-  }
-
-  setSelectedUser(){
   }
 
   setCivilizationList(data){

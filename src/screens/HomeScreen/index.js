@@ -17,7 +17,7 @@ export default class HomeScreen extends Component {
         <div className = "home-container">
 
           <div>
-            <PlayerContainer>"player.name"</PlayerContainer>
+            <PlayerContainer></PlayerContainer>
 
               <ButtonComponent href = "/creategamescreen" label = "New Game"></ButtonComponent>
 

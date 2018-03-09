@@ -26,10 +26,3 @@ export default class TableComponents extends Component{
     )
   }
 }
-
-
-/*<div className="table-grid">
-  {this.state.civilizationList.map((civ)=>{
-    return <li className="list-civ">{civ.id} {civ.civilization} {civ.leader}</li>
-  })}
-</div>*/
