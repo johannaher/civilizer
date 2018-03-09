@@ -17,7 +17,6 @@ export default class HomeScreen extends Component {
         <div className = "home-container">
 
           <div>
-            <PlayerContainer>{sessionStorage.getItem('name')}</PlayerContainer>
 
               <ButtonComponent href = "/creategamescreen" label = "New Game"></ButtonComponent>
 

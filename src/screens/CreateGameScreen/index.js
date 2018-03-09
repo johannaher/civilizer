@@ -19,7 +19,6 @@ export default class CreateGameScreen extends Component {
       result: [],
     }
 
-    this.setSelectedUser = this.setSelectedUser.bind(this)
   }
 
   componentWillMount(props){
