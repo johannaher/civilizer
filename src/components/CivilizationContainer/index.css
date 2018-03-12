@@ -1,0 +1,24 @@
+.civ-icon{
+  width:100%;
+}
+
+#icon{
+  width: 5%;
+}
+
+#civilization{
+  width: 30%;
+  text-transform: uppercase;
+}
+
+#leader{
+  width: 30%;
+}
+
+#ability{
+  width: 30%;
+}
+
+#checkbox{
+  width:5%;
+}

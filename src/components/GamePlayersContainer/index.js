@@ -33,7 +33,6 @@ export default class GamePlayersContainer extends Component {
             <PlayerContainer user = {player}/>
           )
         })}
-        {this.props.children}
       </div>
     );
   }

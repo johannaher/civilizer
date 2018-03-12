@@ -11,31 +11,6 @@ tr{
   border: 1px solid #aaa;
 }
 
-#icon{
-  width: 5%;
-}
-
-.civ-icon{
-  width:100%;
-}
-
-#civilization{
-  width: 30%;
-  text-transform: uppercase;
-}
-
-#leader{
-  width: 30%;
-}
-
-#ability{
-  width: 30%;
-}
-
-#checkbox{
-  width:5%;
-}
-
 .checkbox-container {
     display: block;
     position: relative;
