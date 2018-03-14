@@ -22,7 +22,7 @@ export default class HomeScreen extends Component {
 
           </div>
 
-  <img className="testImage" src="../../assets/images/Gov.png"/>
+          <img className="testImage" src="../../assets/images/Gov.png"/>
 
           <Scoreboard/>
 
