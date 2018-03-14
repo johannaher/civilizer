@@ -17,8 +17,8 @@ export default class ResultsScreen extends Component {
   constructor(props){
     super(props)
     this.state = {
-      users: playerList,
-      civilizations: civList,
+      users: props.location.state.users,
+      civilizations: props.location.state.civilizations,
       results: [],
     }
   }
@@ -43,17 +43,24 @@ export default class ResultsScreen extends Component {
 
 
   render() {
+<<<<<<< HEAD
     console.log("SELECTEDCIVS", this.props.selectedCivs);
     console.log("SELECTEDUSERS", this.props.selectedUsers);
 
     if(!sessionStorage.isLoggedIn){
+=======
+    if(sessionStorage.isLoggedIn==='false'){
+>>>>>>> 87d26e0c2e2181d82e73f905ae328a2f6c4b0e14
       return <Redirect to='/LoginScreen'/>
     }
     return (
       <GridContainer>
+<<<<<<< HEAD
         <GamePlayersContainer userList = {this.state.selectedUsers}/>
         <Tables civilizationList = {this.state.selectedCivs}/>
 
+=======
+>>>>>>> 87d26e0c2e2181d82e73f905ae328a2f6c4b0e14
         {this.state.results.map((result) => {
           return <Choice {...result} />
         })}
