@@ -13,11 +13,10 @@ export default class PlayerContainer extends Component {
 
   onChange (){
     this.setState({checked: !this.state.checked})
-
-    if(this.userCheckbox.checked){
-      this.props.selectedUsers.put(this.state.user)
+    if(this.state.checked){
+      this.props.selectedUsers.push(this.state.user)
     } else {
-      var index = this.props.selectedUsers.indexOf(this.props.selectedUsers)
+      var index = this.props.selectedUsers.indexOf(this.props.user)
       if(index > -1){
         this.props.selectedUsers.splice(index, 1)
       }
@@ -25,7 +24,7 @@ export default class PlayerContainer extends Component {
   }
 
   render() {
-    console.log(this.props.selectedUsers);
+    console.log("SELECTEDUSERS", this.props.selectedUsers);
 
     return (
       <div className = "player-container">
@@ -33,7 +32,7 @@ export default class PlayerContainer extends Component {
         <img className = "user-img" src={this.state.user.imgUrl}/>
         <p>{this.state.user.name}</p>
 
-        <label className="checkbox-container" onChange = {this.state.onChange}>
+        <label className="checkbox-container" onChange = {this.onChange.bind(this)}>
             <input type="checkbox" />
             <span/>
         </label>

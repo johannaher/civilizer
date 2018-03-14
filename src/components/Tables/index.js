@@ -12,9 +12,7 @@ export default class TableComponents extends Component{
   }
 
   render(){
-    console.log(this.state)
     return(
-
       <table className="civ-table">
         {this.props.civilizationList.map((civ)=>{
           return(
