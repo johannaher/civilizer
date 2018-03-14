@@ -18,8 +18,14 @@ export default class HomeScreen extends Component {
 
               <ButtonComponent href = "/creategamescreen" label = "New Game"></ButtonComponent>
 
+<<<<<<< HEAD
               <div id="Gov"/>
               <div className="figure-image" id="Magnus"/>
+=======
+          </div>
+
+          <img className="testImage" src="../../assets/images/Gov.png"/>
+>>>>>>> 80ac97b581e0520ee06ec261845e68e08765a8aa
 
           <Scoreboard/>
 

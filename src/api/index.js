@@ -41,3 +41,9 @@ export const civilizations = (callback) =>{
     callback(res.data)
   })
 }
+
+export const scoreAdd = (gameid, userid, civid, score, timestamp, callback) => {
+  axios.post(url + '/scores',qs.stringify({gameid, userid, civid, score, timestamp}), config).then((res) => {
+    callback(res.data)
+  })
+}
