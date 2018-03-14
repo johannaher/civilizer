@@ -60,23 +60,14 @@ export default class ResultsScreen extends Component {
   }
 
   render() {
-    console.log("SELECTEDCIVS", this.props.selectedCivs);
-    console.log("SELECTEDUSERS", this.props.selectedUsers);
-
-    if(!sessionStorage.isLoggedIn){
+    if(sessionStorage.isLoggedIn==='false'){
       return <Redirect to='/LoginScreen'/>
     }
 
     return (
       <GridContainer>
-<<<<<<< HEAD
-
-        {this.state.results.map((result) => {
-          return<Choice {...result} />
-=======
         {this.state.results.map((result, index) => {
           return <Choice results={this.state.results} key={index} index={index} {...result} />
->>>>>>> 80ac97b581e0520ee06ec261845e68e08765a8aa
         })}
         <Link to='/'><div onClick={()=>this.submitScores()}><Button label="SUBMIT"/></div></Link>
       </GridContainer>
