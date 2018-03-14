@@ -21,12 +21,12 @@ export default class ResultsScreen extends Component {
   constructor(props){
     super(props)
     this.state = {
-      selectedUsers: this.props.selectedUsers,
-      selectedCivs: this.props.selectedCivs,
-      users: playerList,
-      civilizations: civList,
+
       results: [],
       gameId: uuidv4(),
+      users: props.location.state.users,
+      civilizations: props.location.state.civilizations,
+      results: [],
     }
   }
 
