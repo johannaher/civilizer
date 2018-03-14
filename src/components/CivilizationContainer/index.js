@@ -25,10 +25,7 @@ export default class CivilizationContainer extends Component {
 
   render() {
     console.log("SELECTEDCIVS", this.props.selectedCivs);
-<<<<<<< HEAD
 
-=======
->>>>>>> 87d26e0c2e2181d82e73f905ae328a2f6c4b0e14
     return (
       <tbody>
         <tr>
