@@ -1,5 +1,5 @@
 .player-grid{
   display: grid;
-  margin: 0%;
-  grid-auto-flow: column;
+  margin: 0;
+  grid-auto-flow: column dense;
 }
