@@ -53,7 +53,7 @@ export default class LoginScreen extends Component {
   }
 
   render() {
-      if(sessionStorage.isLoggedIn){
+      if(sessionStorage.isLoggedIn==='true'){
         return <Redirect to='/'/>
       }
       return (

@@ -16,7 +16,6 @@ export default class HomeScreen extends Component {
 
         <div className = "home-container">
 
-<<<<<<< HEAD
           <div className=" test">
             <div className="grid-item" id="background2-img">
 
@@ -30,9 +29,7 @@ export default class HomeScreen extends Component {
 
           <div className="header-banner"> HIGHSCORES</div>
           <Scoreboard/>
-=======
-          <ButtonComponent href = "/creategamescreen" label = "New Game"></ButtonComponent>
->>>>>>> 4648f2088764d0a7934350e31e3cac2a7b223dbe
+
 
         </div>
 
