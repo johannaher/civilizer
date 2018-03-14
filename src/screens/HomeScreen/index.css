@@ -15,18 +15,25 @@
 #background2-img{
   background-image: url(../../assets/images/Magnus.png);
   background-repeat: no-repeat;
+<<<<<<< HEAD
   height: 35vh;
 }
 
 .test{
+=======
+  height: 10vh;
+>>>>>>> 4648f2088764d0a7934350e31e3cac2a7b223dbe
   margin: -20px 0;
   display: grid;
   grid-template-columns: 25% 50% 25%;
 }
 
-.testImage{
-  height: 100%;
-  float: right;
+.figure-image #Magnus{
+  background-image: url(../../assets/images/Magnus.png);
+}
+
+.figure-image #Gov{
+  background-image: url(../../assets/images/Gov.png);
 }
 
 .header-banner{

@@ -60,10 +60,7 @@ export default class ResultsScreen extends Component {
   }
 
   render() {
-    console.log("SELECTEDCIVS", this.props.selectedCivs);
-    console.log("SELECTEDUSERS", this.props.selectedUsers);
-
-    if(!sessionStorage.isLoggedIn){
+    if(sessionStorage.isLoggedIn==='false'){
       return <Redirect to='/LoginScreen'/>
     }
 
