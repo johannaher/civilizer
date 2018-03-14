@@ -24,11 +24,6 @@ export default class CivilizationContainer extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    console.log("SELECTEDCIVS", this.props.selectedCivs);
-=======
-    console.log("Hello",this.state)
->>>>>>> 24276562834f852e9a4d678df8fc1cd3ed6ca486
     return (
       <tbody>
         <tr>

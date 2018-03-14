@@ -59,7 +59,6 @@ export default class CreateGameScreen extends Component {
           <Link to="/Results" selectedUsers = {this.state.selectedUsers} selectedCivs = {this.state.selectedCivs}>
             <ButtonComponent label = "CIVILIZE"/>
           </Link>
-
         </GridContainer>
     );
   }

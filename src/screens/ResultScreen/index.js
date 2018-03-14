@@ -11,20 +11,22 @@ import civList from './mocks/civs.js'
 import playerList from './mocks/players.js'
 import { shuffle } from './utilities'
 import Choice from './components/Choice'
+import Button from '../../components/Buttons'
+import moment from 'moment'
+import { scoreAdd } from '../../api'
+const uuidv4 = require('uuid/v4');
 
 export default class ResultsScreen extends Component {
 
   constructor(props){
     super(props)
     this.state = {
-<<<<<<< HEAD
       selectedUsers: this.props.selectedUsers,
       selectedCivs: this.props.selectedCivs,
-=======
       users: playerList,
       civilizations: civList,
       results: [],
->>>>>>> 24276562834f852e9a4d678df8fc1cd3ed6ca486
+      gameId: uuidv4(),
     }
   }
 
@@ -34,6 +36,8 @@ export default class ResultsScreen extends Component {
     let index = 0;
     this.state.users.map((user)=>{
       user.choices = []
+      user.decided = null
+      user.score = 0;
       for( let i = 0 ; i < nrOfChoices ; i++ ){
         user.choices.push(shuffledCivs[index])
         index++
@@ -46,29 +50,23 @@ export default class ResultsScreen extends Component {
     this.randomize()
   }
 
+  submitScores(){
+    let time = moment().format()
+    this.state.results.map((result) => {
+      scoreAdd(this.state.gameId, result.id, result.decided, result.score, time, (data)=>console.log(data))
+    })
+  }
 
   render() {
-<<<<<<< HEAD
-    console.log("SELECTEDCIVS", this.props.selectedCivs);
-    console.log("SELECTEDUSERS", this.props.selectedUsers);
-
-    if(!sessionStorage.isLoggedIn){
-=======
     if(sessionStorage.isLoggedIn==='false'){
->>>>>>> 24276562834f852e9a4d678df8fc1cd3ed6ca486
       return <Redirect to='/LoginScreen'/>
     }
     return (
       <GridContainer>
-<<<<<<< HEAD
-        <GamePlayersContainer userList = {this.state.selectedUsers}/>
-        <Tables civilizationList = {this.state.selectedCivs}/>
-
-=======
-        {this.state.results.map((result) => {
-          return <Choice {...result} />
+        {this.state.results.map((result, index) => {
+          return <Choice results={this.state.results} key={index} index={index} {...result} />
         })}
->>>>>>> 24276562834f852e9a4d678df8fc1cd3ed6ca486
+        <div onClick={()=>console.log(this.state.results)} ><Button label="SUBMIT"/></div>
       </GridContainer>
     );
   }
