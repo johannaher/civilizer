@@ -80,7 +80,7 @@ export default class ResultsScreen extends Component {
           return <Choice results={this.state.results} key={index} index={index} {...result} />
         })}
         <p className="errorText">{this.state.errorText}</p>
-        <Link to='/'><div onClick={()=>this.submitScores()}><Button label="SUBMIT"/></div></Link>
+        <Link to='/Games'><div onClick={()=>this.submitScores()}><Button label="SUBMIT"/></div></Link>
       </GridContainer>
     );
   }

@@ -14,3 +14,7 @@
   text-align: center;
   background-color: #f3f3f3;
 }
+
+.scoreboard-item p{
+  font-size: 1em;
+}

@@ -1,6 +1,5 @@
 .game-score-item{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+
   color: #dda833;
   text-align: center;
   background-color: #f3f3f3;

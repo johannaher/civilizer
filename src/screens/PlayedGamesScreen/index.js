@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import GridContainer from '../../components/GridContainer'
 import style from './index.css'
 import GameTable from './components/GameTable'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { games } from '../../api'
+import Button from '../../components/Buttons'
 
 export default class PlayedGameScreen extends Component {
 
@@ -37,6 +38,7 @@ export default class PlayedGameScreen extends Component {
         {this.state.games.map((game) => {
           return<GameTable {...game}/>
         })}
+        <Link to='/'><div onClick={()=>this.submitScores()}><Button label="HOME"/></div></Link>
       </GridContainer>
     );
   }

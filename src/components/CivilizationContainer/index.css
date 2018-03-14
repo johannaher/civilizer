@@ -1,5 +1,6 @@
 .civ-icon{
   width:100%;
+  max-width: 90px;
   background-color: #173B61;
   border-radius: 50%;
 }

@@ -30,7 +30,6 @@ export default class GameTableItem extends Component {
 
   setCiv(data){
     if(data.success){
-      console.log("HEJ", data);
       this.setState({civ: data.civilization})
     } else {
       console.log("Didn't get any civ ", data)
@@ -41,10 +40,13 @@ export default class GameTableItem extends Component {
     console.log(this.state)
 
     return(
-      <div className = "scoreboard-item">
-        <p>"Name: "{(this.state.user) ? this.state.user.name : null}</p>
-        <p>"Civ: "{(this.state.civ) ? this.state.civ.civilization : null}</p>
-        <p>"Score "{this.state.score}</p>
+      <div className = "game-score-item">
+        <img className = "user-img" src={(this.state.user) ? this.state.user.imgUrl : null}/>
+        <p>Player: {(this.state.user) ? this.state.user.name : null}</p>
+        <img className = "civ-icon" src={(this.state.civ) ? this.state.civ.leaderImg : null}/>
+        <img className = "civ-icon" src={(this.state.civ) ? this.state.civ.iconImg : null}/>
+        <p>Civ: {(this.state.civ) ? this.state.civ.civilization : null}</p>
+        <p>Score: {this.state.score}</p>
       </div>
     );
   }
