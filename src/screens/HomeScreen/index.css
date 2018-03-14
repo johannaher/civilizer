@@ -5,11 +5,20 @@
 
 }
 
+#background-img{
+  background-image: url(../../assets/images/Gov.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height:35vh;
+}
+
 .test{
   background-image: url(../../assets/images/Magnus.png);
   background-repeat: no-repeat;
   height: 35vh;
   margin: -20px 0;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
 }
 
 .testImage{

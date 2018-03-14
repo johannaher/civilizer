@@ -17,13 +17,15 @@ export default class HomeScreen extends Component {
         <div className = "home-container">
 
           <div className=" test">
+            <div className="grid-item">
 
+            </div>
+            <div className="grid-item">
               <ButtonComponent href = "/creategamescreen" label = "New Game"></ButtonComponent>
-
+            </div>
+            <div className="grid-item" id="background-img">
+            </div>
           </div>
-
-          <img className="testImage" src="../../assets/images/Gov.png"/>
-
           <Scoreboard/>
 
         </div>

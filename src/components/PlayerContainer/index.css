@@ -12,10 +12,12 @@
 
 .player-container p{
   font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
   display: inline-block;
   color: white;
   margin-right: 5px;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .player-container{
