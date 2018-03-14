@@ -51,7 +51,7 @@ export default class CreateGameScreen extends Component {
     }
     return (
         <GridContainer>
-          <GamePlayersContainer/>
+          <GamePlayersContainer selectedUsers = {this.state.selectedUsers}/>
           <Header label = "Choose Civilizations"/>
 
           <Tables civilizationList = {this.state.civilizationList}/>

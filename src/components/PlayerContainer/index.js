@@ -8,12 +8,12 @@ export default class PlayerContainer extends Component {
     this.state = {
       user: props.user,
       checked: {},
-      onChange: function(){this.setState({checked: !this.state.checked})}
     }
   }
 
-/*
-  selectUser(){
+  onChange (){
+    this.setState({checked: !this.state.checked})
+
     if(this.userCheckbox.checked){
       this.props.selectedUsers.put(this.state.user)
     } else {
@@ -23,11 +23,10 @@ export default class PlayerContainer extends Component {
       }
     }
   }
-*/
-
-
 
   render() {
+    console.log(this.props.selectedUsers);
+
     return (
       <div className = "player-container">
 
@@ -42,5 +41,6 @@ export default class PlayerContainer extends Component {
       </div>
 
     );
+
   }
 }
