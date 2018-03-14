@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import style from './index.css'
+import Polygon from 'react-polygon'
+
 
 export default class PlayerContainer extends Component {
 
@@ -27,8 +29,10 @@ export default class PlayerContainer extends Component {
     console.log("SELECTEDUSERS", this.props.selectedUsers);
 
     return (
-      <div className = "player-container">
 
+
+      <div className = "player-container">
+        <Polygon n={6} size={100} fill={this.state.user.imgUrl}/>
         <img className = "user-img" src={this.state.user.imgUrl}/>
         <p>{this.state.user.name}</p>
 
