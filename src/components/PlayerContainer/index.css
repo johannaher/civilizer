@@ -12,7 +12,7 @@
 }
 
 .player-container p{
-  font-size: 1em;
+  font-size: 17px;
   font-family: 'Quicksand', sans-serif;
   display: inline-block;
   color: white;
@@ -23,6 +23,9 @@
 
 .player-container{
   background-color: #AEA993;
+  background-image: url("https://cdn.2kgames.com/web/civilization.com/images/civilization-6/bg_about.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   min-height: 160px;
   text-align: center;

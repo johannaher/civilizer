@@ -21,12 +21,13 @@ export default class ResultsScreen extends Component {
   constructor(props){
     super(props)
     this.state = {
+
       results: [],
       gameId: uuidv4(),
       users: props.location.state.users,
       civilizations: props.location.state.civilizations,
       results: [],
-      error: false,
+      successfulSubmit: false,
     }
   }
 
@@ -54,33 +55,40 @@ export default class ResultsScreen extends Component {
     let time = moment().format()
     let success;
     this.state.results.map((result) => {
-      if(result.decided!==null){
-        scoreAdd(this.state.gameId, result.id, result.decided, result.score, time, ()=>{})
-      } else {
-        this.setState({ error: "Someone forgot to pick civ!"})
-      }
+      scoreAdd(this.state.gameId, result.id, result.decided, result.score, time, ()=>{})
     })
   }
 
   render() {
+
+    console.log("SELECTEDCIVS", this.props.selectedCivs);
+    console.log("SELECTEDUSERS", this.props.selectedUsers);
+
     if(sessionStorage.isLoggedIn==='false'){
+
       return <Redirect to='/LoginScreen'/>
     }
-    if(this.state.users.length<1 || this.state.civilizations.length < this.state.users.length){
-      return(
-        <GridContainer>
-        <p className="errorText">Too few users or civs for a game!!!</p>
-        <Link to='/CreateGameScreen'><Button label="GO BACK"/></Link>
-        </GridContainer>
-      )
-    }
+
     return (
       <GridContainer>
+
+        <GamePlayersContainer userList = {this.state.selectedUsers}/>
+        <Tables civilizationList = {this.state.selectedCivs}/>
+
+        {this.state.results.map((result) => {
+          return <Choice {...result} />
+        })}
+
         {this.state.results.map((result, index) => {
           return <Choice results={this.state.results} key={index} index={index} {...result} />
         })}
-        <p className="errorText">{this.state.errorText}</p>
-        <Link to='/'><div onClick={()=>this.submitScores()}><Button label="SUBMIT"/></div></Link>
+
+        <Link to='/'>
+          <div onClick={()=>this.submitScores()}>
+            <Button label="SUBMIT"/>
+          </div>
+        </Link>
+
       </GridContainer>
     );
   }
