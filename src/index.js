@@ -6,7 +6,9 @@ import CreateGameScreen from './screens/CreateGameScreen';
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import Results from './screens/ResultScreen';
+import GameScores from './screens/PlayedGamesScreen'
 import registerServiceWorker from './registerServiceWorker';
+
 const App = () => (
     <Router>
       <div>
@@ -14,6 +16,7 @@ const App = () => (
         <Route path = "/CreateGameScreen" component={CreateGameScreen}/>
         <Route path = "/LoginScreen" component={LoginScreen}/>
         <Route path = "/Results" component={Results}/>
+        <Route path = "/Games" component={GameScores}/>
       </div>
     </Router>
   )

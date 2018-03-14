@@ -5,14 +5,17 @@
 
 }
 
-.test{
-  background-image: url(../../assets/images/Magnus.png);
+.figure-image{
+  height: 100%;
   background-repeat: no-repeat;
-  height: 35vh;
+  height: 10vh;
   margin: -20px 0;
 }
 
-.testImage{
-  height: 100%;
-  float: right;
+.figure-image #Magnus{
+  background-image: url(../../assets/images/Magnus.png);
+}
+
+.figure-image #Gov{
+  background-image: url(../../assets/images/Gov.png);
 }

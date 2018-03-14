@@ -48,8 +48,9 @@ export default class ResultsScreen extends Component {
     }
     return (
       <GridContainer>
+
         {this.state.results.map((result) => {
-          return <Choice {...result} />
+          return<Choice {...result} />
         })}
       </GridContainer>
     );

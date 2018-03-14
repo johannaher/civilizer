@@ -2,16 +2,23 @@ import axios from 'axios'
 import qs from 'qs'
 
 const url = "http://localhost:1337"
-
+const token = sessionStorage.getItem('token')
 const config = {
   params: {
-    token: sessionStorage.getItem('token')
+    token: token
   }
 }
 
 
+
 export const users = (callback) =>{
   axios.get(url + '/users', config).then((res) => {
+    callback(res.data)
+  })
+}
+
+export const userById = (id, callback) =>{
+  axios.get(url + '/users/id', { params: {id:id, token: token }}).then((res) => {
     callback(res.data)
   })
 }
