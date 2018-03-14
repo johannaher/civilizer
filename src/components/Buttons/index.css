@@ -1,7 +1,8 @@
 .confirm-button{
     font-size: 35px;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 100;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     vertical-align: middle;
     text-align: center;

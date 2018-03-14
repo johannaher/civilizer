@@ -12,16 +12,37 @@
 
 .player-container p{
   font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
+  display: inline-block;
+  color: white;
+  margin-right: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .player-container{
   background-color: #AEA993;
-  height: auto;
+  height: 100%;
+  min-height: 160px;
   text-align: center;
-  padding: 10px;
   border-radius: 12px;
-  border: 5px solid black;
+  border: 1px solid black;
   transition-property: color, box-shadow, border-color, background-color, opacity, -webkit-box-shadow;
   transition-duration: 0.25s;
-  width: 50%;
+  width: 60%;
+  position: relative;
+}
+
+.display-name{
+  position: absolute;
+  bottom:0;
+  background-color: black;
+  width: 100%;
+  opacity: 0.7;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.checkbox-container{
+  display: inline-block;
 }

@@ -35,12 +35,14 @@ export default class PlayerContainer extends Component {
       <div className="player-container">
 
         <img className="user-img" src={this.state.user.imgUrl}/>
-        <p>{this.state.user.name}</p>
+        <div className="display-name">
+          <p>{this.state.user.name}</p>
 
-        <label className="checkbox-container" onChange = {this.onChange.bind(this)}>
-            <input type="checkbox" />
-            <span/>
-        </label>
+          <label className="checkbox-container" onChange = {this.onChange.bind(this)}>
+              <input type="checkbox" />
+              <span/>
+          </label>
+        </div>
 
       </div>
 
