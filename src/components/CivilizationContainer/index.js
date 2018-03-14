@@ -7,11 +7,24 @@ export default class CivilizationContainer extends Component {
     super(props)
     this.state = {
       civ: this.props.civ,
+      checked: {},
+    }
+  }
+
+  onChange (){
+    this.setState({checked: !this.state.checked})
+    if(this.state.checked){
+      this.props.selectedCivs.push(this.state.civ)
+    } else {
+      var index = this.props.selectedCivs.indexOf(this.props.civ)
+      if(index > -1){
+        this.props.selectedCivs.splice(index, 1)
+      }
     }
   }
 
   render() {
-    console.log(this.state)
+    console.log("SELECTEDCIVS", this.props.selectedCivs);
     return (
       <tbody>
         <tr>
@@ -20,7 +33,7 @@ export default class CivilizationContainer extends Component {
           <td id="civilization"> {this.state.civ.civilization} </td>
           <td id="ability">(founding father ex)</td>
           <td id="checkbox">
-            <label className="checkbox-container">
+            <label className="checkbox-container" onChange = {this.onChange.bind(this)}>
                 <input type="checkbox"/>
                 <span></span>
             </label>

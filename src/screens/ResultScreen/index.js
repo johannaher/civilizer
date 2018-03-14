@@ -13,17 +13,23 @@ export default class CreateGameScreen extends Component {
   constructor(props){
     super(props)
     this.state = {
-      civilizedPlayersList: [],
+      selectedUsers: this.props.selectedUsers,
+      selectedCivs: this.props.selectedCivs,
     }
   }
 
   render() {
+    console.log("SELECTEDCIVS", this.props.selectedCivs);
+    console.log("SELECTEDUSERS", this.props.selectedUsers);
+
     if(!sessionStorage.isLoggedIn){
       return <Redirect to='/LoginScreen'/>
     }
     return (
       <GridContainer>
-        <p>Hej</p>
+        <GamePlayersContainer userList = {this.state.selectedUsers}/>
+        <Tables civilizationList = {this.state.selectedCivs}/>
+
       </GridContainer>
     );
   }
