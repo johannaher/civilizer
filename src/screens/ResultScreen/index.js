@@ -82,18 +82,8 @@ export default class ResultsScreen extends Component {
         {this.state.results.map((result, index) => {
           return <Choice results={this.state.results} key={index} index={index} {...result} />
         })}
-<<<<<<< HEAD
         <p className="errorText">{this.state.errorText}</p>
         <Link to='/Games'><div onClick={()=>this.submitScores()}><Button label="SUBMIT"/></div></Link>
-=======
-
-        <Link to='/'>
-          <div onClick={()=>this.submitScores()}>
-            <Button label="SUBMIT"/>
-          </div>
-        </Link>
-
->>>>>>> 71c131150318ac0dda946fc49d774630bfa4295e
       </GridContainer>
     );
   }
