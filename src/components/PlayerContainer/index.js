@@ -12,7 +12,6 @@ export default class PlayerContainer extends Component {
     }
   }
 
-/*
   selectUser(){
     if(this.userCheckbox.checked){
       this.props.selectedUsers.put(this.state.user)
@@ -23,7 +22,6 @@ export default class PlayerContainer extends Component {
       }
     }
   }
-*/
 
 
 
