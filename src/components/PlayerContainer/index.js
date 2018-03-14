@@ -6,10 +6,13 @@ export default class PlayerContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      user: props.user
+      user: props.user,
+      checked: {},
+      onChange: function(){this.setState({checked: !this.state.checked})}
     }
   }
 
+/*
   selectUser(){
     if(this.userCheckbox.checked){
       this.props.selectedUsers.put(this.state.user)
@@ -20,22 +23,21 @@ export default class PlayerContainer extends Component {
       }
     }
   }
+*/
 
-  userCheckbox = (
-    <label class="checkbox-container">
-        <input type="checkbox" handleCheckboxChange = {this.selectUser}/>
-        <span></span>
-    </label>
-  );
+
 
   render() {
     return (
       <div className = "player-container">
 
-        <p><img className = "user-img" src={this.state.user.imgUrl}/>
-        <p>{this.state.user.name}</p></p>
+        <img className = "user-img" src={this.state.user.imgUrl}/>
+        <p>{this.state.user.name}</p>
 
-        {this.userCheckbox}
+        <label className="checkbox-container" onChange = {this.state.onChange}>
+            <input type="checkbox" />
+            <span/>
+        </label>
 
       </div>
 

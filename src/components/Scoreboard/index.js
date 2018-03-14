@@ -36,7 +36,7 @@ export default class Scoreboard extends Component {
               <br/>{highScore.name}</p>
               <p>{highScore.score}</p>
             </div>
-            )
+          )
         })}
       </div>
     );
