@@ -23,6 +23,18 @@ export const userById = (id, callback) =>{
   })
 }
 
+export const civById = (id, callback) =>{
+  axios.get(url + '/civilizations/id', { params: {id:id, token: token }}).then((res) => {
+    callback(res.data)
+  })
+}
+
+export const games = (callback) =>{
+  axios.get(url + '/scores/games', config).then((res) => {
+    callback(res.data)
+  })
+}
+
 export const highScores = (callback) =>{
   axios.get(url + '/scores/high', config).then((res) => {
     callback(res.data)
