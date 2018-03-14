@@ -7,6 +7,7 @@ import GamePlayersContainer from '../../components/GamePlayersContainer'
 import Header from '../../components/Headers'
 import { Redirect, Link } from 'react-router-dom'
 import {civilizations, users} from '../../api'
+import HeaderContainer from '../../components/HeaderContainer'
 
 export default class CreateGameScreen extends Component {
 
@@ -50,8 +51,10 @@ export default class CreateGameScreen extends Component {
       console.log ("Empty civilizationsList")
     }
     return (
+
         <GridContainer>
           <GamePlayersContainer userList = {this.state.userList} selectedUsers = {this.state.selectedUsers}/>
+
           <Header label = "Choose Civilizations"/>
 
           <Tables civilizationList = {this.state.civilizationList} selectedCivs = {this.state.selectedCivs}/>

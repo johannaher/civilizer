@@ -17,7 +17,7 @@ export default class HomeScreen extends Component {
         <div className = "home-container">
 
           <div className=" test">
-            <div className="grid-item">
+            <div className="grid-item" id="background2-img">
 
             </div>
             <div className="grid-item">
@@ -26,6 +26,8 @@ export default class HomeScreen extends Component {
             <div className="grid-item" id="background-img">
             </div>
           </div>
+
+          <div className="header-banner"> HIGHSCORES</div>
           <Scoreboard/>
 
         </div>

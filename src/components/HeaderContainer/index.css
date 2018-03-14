@@ -1,0 +1,10 @@
+.header-banner{
+  background-color: black;
+  font-size:27px;
+  font-family: 'Quicksand',sans-serif;
+  color: white;
+  text-align: center;
+  height: 30px;
+  margin-bottom: -20px;
+  margin-top:20px;
+}

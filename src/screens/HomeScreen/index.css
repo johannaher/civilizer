@@ -12,10 +12,13 @@
   height:35vh;
 }
 
-.test{
+#background2-img{
   background-image: url(../../assets/images/Magnus.png);
   background-repeat: no-repeat;
   height: 35vh;
+}
+
+.test{
   margin: -20px 0;
   display: grid;
   grid-template-columns: 25% 50% 25%;
@@ -24,4 +27,14 @@
 .testImage{
   height: 100%;
   float: right;
+}
+
+.header-banner{
+  background-color: black;
+  font-size:27px;
+  font-family: 'Quicksand',sans-serif;
+  color: white;
+  text-align: center;
+  height: 30px;
+  margin-bottom: -20px;
 }
