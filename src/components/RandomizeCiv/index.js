@@ -22,8 +22,8 @@ export default class RandomizeCiv extends Component{
         civilizations[x] = temp
       }
 
-      for(i =users.length ; i>1; i--){
-        for(){
+      for(i = users.length ; i>1; i--){
+        for(j = 1 ; j <= 3; j++){
           test = civilizations.shift();
           civsAndUsers.put({users[i].id, test.id})
           console.log(civilizations); //alla civs?

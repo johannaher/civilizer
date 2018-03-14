@@ -16,7 +16,7 @@ export default class CreateGameScreen extends Component {
       civilizationList: [],
       selectedUsers: [],
       userList: [],
-      selectedCivs: [],
+      result: [],
     }
 
   }
@@ -42,10 +42,6 @@ export default class CreateGameScreen extends Component {
     }
   }
 
-  saveUsersList(){
-    this.state.userList = this.state.selectedUsers;
-  }
-
   render() {
     if(!sessionStorage.isLoggedIn){
       return <Redirect to='/LoginScreen'/>
@@ -60,7 +56,7 @@ export default class CreateGameScreen extends Component {
 
           <Tables civilizationList = {this.state.civilizationList}/>
 
-          <ButtonComponent  href = "Results" label="CIVILIZE" onClick = {this.saveUsersList()}/>
+          <ButtonComponent  href = "Results" label="CIVILIZE"/>
 
         </GridContainer>
     );
