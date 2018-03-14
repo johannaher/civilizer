@@ -1,34 +1,24 @@
 import React, { Component } from 'react'
 import style from './index.css'
 import PlayerContainer from '../PlayerContainer'
-import { users } from '../../api'
-
 export default class GamePlayersContainer extends Component {
 
   constructor(props){
     super(props)
     this.state = {
-      scoreList: [],
+      userList: props.userList,
     }
   }
 
-  componentWillMount(props){
-    users(this.setUsers.bind(this))
-  }
-
-  setUsers(data){
-    if(data.success){
-      this.setState({scoreList: data.users})
-    } else {
-      console.log("Didn't get any users ", data.message)
-    }
+  componentWillReceiveProps(props){
+    this.setState({userList: props.userList});
   }
 
   render() {
     console.log(this.state)
     return (
       <div className = "player-grid">
-        {this.state.scoreList.map((player,index)=>{
+        {this.state.userList.map((player,index)=>{
           return(
             <PlayerContainer user = {player} selectedUsers = {this.props.selectedUsers}/>
           )

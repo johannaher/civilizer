@@ -5,7 +5,7 @@ import Tables from '../../components/Tables'
 import ButtonComponent from '../../components/Buttons'
 import GamePlayersContainer from '../../components/GamePlayersContainer'
 import Header from '../../components/Headers'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import {civilizations, users} from '../../api'
 
 export default class CreateGameScreen extends Component {
@@ -14,9 +14,9 @@ export default class CreateGameScreen extends Component {
     super(props)
     this.state = {
       civilizationList: [],
-      selectedUsers: [],
       userList: [],
-      result: [],
+      selectedUsers: [],
+      selectedCivs: [],
     }
 
   }
@@ -51,12 +51,14 @@ export default class CreateGameScreen extends Component {
     }
     return (
         <GridContainer>
-          <GamePlayersContainer selectedUsers = {this.state.selectedUsers}/>
+          <GamePlayersContainer userList = {this.state.userList} selectedUsers = {this.state.selectedUsers}/>
           <Header label = "Choose Civilizations"/>
 
-          <Tables civilizationList = {this.state.civilizationList}/>
+          <Tables civilizationList = {this.state.civilizationList} selectedCivs = {this.state.selectedCivs}/>
 
-          <ButtonComponent  href = "Results" label="CIVILIZE"/>
+          <Link to="/Results" selectedUsers = {this.state.selectedUsers} selectedCivs = {this.state.selectedCivs}>
+            <ButtonComponent label = "CIVILIZE"/>
+          </Link>
 
         </GridContainer>
     );

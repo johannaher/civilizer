@@ -7,8 +7,12 @@ export default class TableComponents extends Component{
   constructor(props){
     super(props);
     this.state = {
-      civilizationsList: props.civilizationsList,
+      civilizationList: props.civilizationList,
     }
+  }
+
+  componentWillReceiveProps(props){
+    this.setState({civilizationList: props.civilizationList});
   }
 
   render(){
@@ -16,7 +20,7 @@ export default class TableComponents extends Component{
       <table className="civ-table">
         {this.props.civilizationList.map((civ)=>{
           return(
-            <CivilizationContainer civ = {civ}/>
+            <CivilizationContainer civ = {civ} selectedCivs = {this.props.selectedCivs}/>
           )
         })}
       </table>
