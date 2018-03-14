@@ -1,0 +1,24 @@
+.user-choice-container {
+  font-family: "Helvetica-Light";
+  margin-top: 5em;
+  padding: 2em;
+}
+
+.user-choice-choices {
+}
+
+.score-label {
+  font-size: 24px;
+  margin-left: 20px;
+ }
+
+.score-input {
+  padding: 10px;
+  border: 1px solid transparent;
+  font-size: 24px;
+  background-color: transparent;
+}
+
+.score-input:focus {
+    outline: none;
+}
