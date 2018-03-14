@@ -56,7 +56,7 @@ export default class CreateGameScreen extends Component {
 
           <Tables civilizationList = {this.state.civilizationList} selectedCivs = {this.state.selectedCivs}/>
 
-          <Link to="/Results" selectedUsers = {this.state.selectedUsers} selectedCivs = {this.state.selectedCivs}>
+          <Link to={{pathname: "/Results", state: {users: this.state.selectedUsers, civilizations: this.state.selectedCivs}}}>
             <ButtonComponent label = "CIVILIZE"/>
           </Link>
 

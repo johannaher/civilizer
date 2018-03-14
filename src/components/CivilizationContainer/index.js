@@ -24,16 +24,13 @@ export default class CivilizationContainer extends Component {
   }
 
   render() {
-<<<<<<< HEAD
     console.log("SELECTEDCIVS", this.props.selectedCivs);
-=======
-    console.log("Hello",this.state)
->>>>>>> 24276562834f852e9a4d678df8fc1cd3ed6ca486
     return (
       <tbody>
         <tr>
-          <td id="icon"><img className="civ-icon" src={this.state.civ.iconImg}/></td>
+          <td id="icon"><img className="civ-icon" src={this.state.civ.leaderImg}/></td>
           <td id="leader">{this.state.civ.leader}</td>
+          <td id="icon"><img className="civ-icon" src={this.state.civ.iconImg}/></td>
           <td id="civilization"> {this.state.civ.civilization} </td>
           <td id="ability">(founding father ex)</td>
           <td id="checkbox">
