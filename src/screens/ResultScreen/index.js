@@ -5,7 +5,7 @@ import Tables from '../../components/Tables'
 import ButtonComponent from '../../components/Buttons'
 import GamePlayersContainer from '../../components/GamePlayersContainer'
 import Header from '../../components/Headers'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { civilizations } from '../../api'
 import civList from './mocks/civs.js'
 import playerList from './mocks/players.js'
@@ -27,6 +27,7 @@ export default class ResultsScreen extends Component {
       users: props.location.state.users,
       civilizations: props.location.state.civilizations,
       results: [],
+      successfulSubmit: false,
     }
   }
 
@@ -52,8 +53,9 @@ export default class ResultsScreen extends Component {
 
   submitScores(){
     let time = moment().format()
+    let success;
     this.state.results.map((result) => {
-      scoreAdd(this.state.gameId, result.id, result.decided, result.score, time, (data)=>console.log(data))
+      scoreAdd(this.state.gameId, result.id, result.decided, result.score, time, ()=>{})
     })
   }
 
@@ -61,12 +63,13 @@ export default class ResultsScreen extends Component {
     if(sessionStorage.isLoggedIn==='false'){
       return <Redirect to='/LoginScreen'/>
     }
+
     return (
       <GridContainer>
         {this.state.results.map((result, index) => {
           return <Choice results={this.state.results} key={index} index={index} {...result} />
         })}
-        <div onClick={()=>console.log(this.state.results)} ><Button label="SUBMIT"/></div>
+        <Link to='/'><div onClick={()=>this.submitScores()}><Button label="SUBMIT"/></div></Link>
       </GridContainer>
     );
   }
