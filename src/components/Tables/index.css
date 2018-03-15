@@ -2,7 +2,10 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 30px;
-  border: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  height: 50vh;
+  overflow: auto;
 }
 
 .civ-table p{
@@ -22,6 +25,10 @@ tr{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.checkAllText {
+  text-align: right;
+  margin-right:35px;
 }
 
 input[type=checkbox] {

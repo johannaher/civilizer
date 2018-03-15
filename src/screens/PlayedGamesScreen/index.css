@@ -1,0 +1,7 @@
+.a-background{
+  background-image: url(../../assets/images/amani.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 20vh;
+}
