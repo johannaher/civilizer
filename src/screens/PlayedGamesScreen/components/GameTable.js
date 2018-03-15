@@ -8,8 +8,11 @@ export default class GameTable extends Component {
   render(){
     console.log(this.props.timestamp)
 
+
+
     return(
       <div>
+
         <HeaderContainer label= {this.props.timestamp} />
         <div>
           {this.props.scores.map((playerInfo, index)=>{
