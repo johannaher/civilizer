@@ -30,10 +30,7 @@ export default class HomeScreen extends Component {
           <div className="header-banner"> HIGHSCORES</div>
           <Scoreboard/>
 
-
         </div>
-
-        <img className="testImage" src="../../assets/images/Gov.png"/>
 
         <Scoreboard/>
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import style from './index.css'
+import GameTableItem from './GameTableItem.js'
 
 export default class GameTable extends Component {
 
@@ -12,11 +13,9 @@ export default class GameTable extends Component {
         <div>
           {this.props.scores.map((playerInfo, index)=>{
             return (
-              <div className = "game-score-item">
+              <div>
                 <p>#{index + 1}</p>
-                <p>"Name: "{playerInfo.userid}/></p>
-                <p>"Civ: "{playerInfo.civid}</p>
-                <p>"Score "{playerInfo.score}</p>
+                <GameTableItem playerInfo = {playerInfo}/>
               </div>
             );
           })}
