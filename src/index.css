@@ -8,4 +8,9 @@ body {
   min-height: 100vh;
 }
 
+p{
+  font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300');

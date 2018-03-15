@@ -4,7 +4,7 @@ import Style from './index.css'
 export default class Headers extends Component {
   render() {
     return (
-      <p className="header-style">{this.props.label}</p>
+      <p className="header">{this.props.label}</p>
     );
   }
 }

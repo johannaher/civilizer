@@ -12,6 +12,7 @@ export default class GameTableItem extends Component {
       score: props.playerInfo.score,
       user: undefined,
       civ: undefined,
+      rank: props.rank,
     }
   }
 
@@ -41,12 +42,24 @@ export default class GameTableItem extends Component {
 
     return(
       <div className = "game-score-item">
-        <img className = "user-img" src={(this.state.user) ? this.state.user.imgUrl : null}/>
-        <p>Player: {(this.state.user) ? this.state.user.name : null}</p>
-        <img className = "civ-icon" src={(this.state.civ) ? this.state.civ.leaderImg : null}/>
-        <img className = "civ-icon" src={(this.state.civ) ? this.state.civ.iconImg : null}/>
-        <p>Civ: {(this.state.civ) ? this.state.civ.civilization : null}</p>
-        <p>Score: {this.state.score}</p>
+        <div className="single-text">
+          <p>#{this.state.rank}</p>
+        </div>
+
+        <div>
+          <img className = "user-img" src={(this.state.user) ? this.state.user.imgUrl : null}/>
+          <p>Player: {(this.state.user) ? this.state.user.name : null}</p>
+        </div>
+
+        <div>
+          <img className = "civ-icon" src={(this.state.civ) ? this.state.civ.leaderImg : null}/>
+          <img className = "civ-icon" src={(this.state.civ) ? this.state.civ.iconImg : null}/>
+          <p>Civ: {(this.state.civ) ? this.state.civ.civilization : null}</p>
+        </div>
+
+        <div className="single-text">
+          <p>Score: {this.state.score}</p>
+        </div>
       </div>
     );
   }
