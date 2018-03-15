@@ -60,21 +60,15 @@ export default class ResultsScreen extends Component {
   }
 
   render() {
-
-    console.log("SELECTEDCIVS", this.props.selectedCivs);
-    console.log("SELECTEDUSERS", this.props.selectedUsers);
-
+    console.log(this.state)
     if(sessionStorage.isLoggedIn==='false'){
-
       return <Redirect to='/LoginScreen'/>
     }
-
+    if(this.state.users.length < 1 || this.state.civilizations.length < this.state.users.length){
+      return(<p className="errorText">Too few users or civilizations to radomize!</p>)
+    }
     return (
       <GridContainer>
-
-        <GamePlayersContainer userList = {this.state.selectedUsers}/>
-        <Tables civilizationList = {this.state.selectedCivs}/>
-
         {this.state.results.map((result) => {
           return <Choice {...result} />
         })}
