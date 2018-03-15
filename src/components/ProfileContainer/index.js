@@ -14,6 +14,10 @@ export default class PlayerContainer extends Component {
     }
   }
 
+  logout(){
+    sessionStorage.setItem('isLoggedIn',false)
+  }
+
   render() {
 
     return (
@@ -21,7 +25,7 @@ export default class PlayerContainer extends Component {
       <div className="profile-container">
         <p>{this.state.userName}</p>
         <br/>
-        <Link to='/LoginScreen'>Sign out</Link>
+        <Link to='/LoginScreen' onClick={()=>this.logout()}>Sign out</Link>
       </div>
 
     );

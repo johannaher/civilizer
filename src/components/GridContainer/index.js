@@ -16,25 +16,28 @@ export default class GridContainer extends Component {
           </a>
         </div>
 
+        <div className = "menu-row-container">
+
+          <Link to={{pathname: "/CreateGameScreen",}}>
+            <div className = "menu-button">New</div>
+          </Link>
+
+          <Link to={{pathname: "/Games",}}>
+          <div className = "menu-button">Games</div>
+          </Link>
+
+          <Link to={{pathname: "/",}}>
+          <div className = "menu-button">Highscore</div>
+          </Link>
+
+          <ProfileContainer/>
+
+        </div>
+
+
 
         <div className = "center-container">
-          <div className = "menu-row-container">
 
-            <Link to={{pathname: "/CreateGameScreen",}}>
-              <div className = "menu-button">New</div>
-            </Link>
-
-            <Link to={{pathname: "/Games",}}>
-            <div className = "menu-button">Games</div>
-            </Link>
-
-            <Link to={{pathname: "/",}}>
-            <div className = "menu-button">Highscore</div>
-            </Link>
-
-            <ProfileContainer/>
-
-          </div>
 
           {this.props.children}
         </div>

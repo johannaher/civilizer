@@ -11,10 +11,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 export default class HomeScreen extends Component {
 
-  logout(){
-    sessionStorage.setItem('isLoggedIn',false)
-  }
-
   render() {
     return (
       <GridContainer>
@@ -32,14 +28,7 @@ export default class HomeScreen extends Component {
           <Scoreboard/>
           <ButtonComponent href="/games" label ="Previous games and scores"> </ButtonComponent>
         </div>
-        <MuiThemeProvider>
-          <FlatButton
-            onClick={()=>this.logout()}
-            className="login-button"
-            label="LOGOUT"
-            secondary={true}
-            />
-          </MuiThemeProvider>
+
       </GridContainer>
 
     );
