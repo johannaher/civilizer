@@ -7,3 +7,13 @@
   text-decoration: none;
   text-align: center;
 }
+
+
+.g-background{
+  background-image: url(../../assets/images/gilgamesh.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70vh;
+  width: 50%;
+  margin: -25px 25%;
+}
