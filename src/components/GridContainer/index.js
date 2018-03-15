@@ -18,16 +18,16 @@ export default class GridContainer extends Component {
 
         <div className = "menu-row-container">
 
-        <Link to={{pathname: "/CreateGameScreen",}} style={{ textDecoration: 'none' }}>
-          <div className = "menu-button"><p>New</p></div>
+        <Link to={{pathname: "/",}} style={{ textDecoration: 'none' }}>
+          <div className = "menu-button"><p>Highscores</p></div>
         </Link>
 
-          <Link to={{pathname: "/Games",}} style={{ textDecoration: 'none' }}>
-            <div className = "menu-button"><p>Games</p></div>
+          <Link to={{pathname: "/CreateGameScreen",}} style={{ textDecoration: 'none' }}>
+            <div className = "menu-button"><p>New Game</p></div>
           </Link>
 
-          <Link to={{pathname: "/",}} style={{ textDecoration: 'none' }}>
-            <div className = "menu-button"><p>Highscore</p></div>
+          <Link to={{pathname: "/Games",}} style={{ textDecoration: 'none' }}>
+            <div className = "menu-button"><p>Previous Games</p></div>
           </Link>
 
           <ProfileContainer/>

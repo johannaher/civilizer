@@ -16,6 +16,7 @@
   border-bottom: 1px solid #aaa;
   border-left: 1px solid #aaa;
   border-right: 1px solid #aaa;
+
 }
 
 .scoreboard-item p{
@@ -28,4 +29,17 @@
   justify-content: center;
   min-height: 20em;
   flex:1;
+}
+
+.star{
+  background-image: url(../../assets/images/star2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 60px;
+}
+
+.star p{
+  color:black;
+  font-size: 1.2em;
 }
