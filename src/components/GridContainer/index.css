@@ -11,6 +11,7 @@
   grid-row: 3;
   background-color: #f3f3f3;
   grid-template-columns: 1fr;
+  padding-bottom: 2%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -41,7 +42,7 @@
   display: grid;
   grid-row: 2;
   grid-column: 2;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 29% 29% 29% 13%;
   font-family: 'Quicksand', sans-serif;
   background-color: #dda833;
   letter-spacing: 2px;
@@ -50,7 +51,6 @@
 }
 
 .menu-row-container p{
-  font-size: 1em;
   text-decoration: none;
 }
 
@@ -77,6 +77,7 @@
 
 .header-container h1{
   font-size: 2em;
+  letter-spacing: 7px;
 }
 
 .header-container a{
@@ -90,13 +91,4 @@
   background-color: black;
   color: #dda833;
   text-align: center;
-}
-
-.footer-container p {
-  font-size: 1em;
-}
-
-.top-header{
-  letter-spacing: 7px;
-
 }
