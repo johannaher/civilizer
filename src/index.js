@@ -10,17 +10,16 @@ import GameScores from './screens/PlayedGamesScreen'
 import registerServiceWorker from './registerServiceWorker';
 
 const App = () => (
-    <Router>
-      <div>
-        <Route exact path = "/" render={()=>{ return handleRoute(<HomeScreen/>)}}/>
-        <Route path = "/CreateGameScreen" render={()=>{ return handleRoute(<CreateGameScreen/>)}}/>
-        <Route path = "/LoginScreen" render={()=>handleLoginRoute()}/>
-        <Route path = "/Results" render={(obj)=>handleRoute(<Results {...obj}/>)}/>
-        <Route path = "/Games" render={()=>handleRoute(<GameScores/>)}/>
-      </div>
-    </Router>
-  )
-
+  <Router>
+    <div>
+      <Route exact path = "/" render={()=>{ return handleRoute(<HomeScreen/>)}}/>
+      <Route path = "/CreateGameScreen" render={()=>{ return handleRoute(<CreateGameScreen/>)}}/>
+      <Route path = "/LoginScreen" render={()=>handleLoginRoute()}/>
+      <Route path = "/Results" render={(obj)=>handleRoute(<Results {...obj}/>)}/>
+      <Route path = "/Games" render={()=>handleRoute(<GameScores/>)}/>
+    </div>
+  </Router>
+)
 
 const handleRoute = (component) => {
   if(sessionStorage.isLoggedIn==='true'){

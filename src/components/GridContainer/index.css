@@ -13,6 +13,30 @@
   grid-template-columns: 1fr;
 }
 
+@media only screen and (max-width: 800px) {
+  .grid-container{
+    grid-template-columns: 5% 90% 5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container{
+    grid-template-columns: 2% 96% 2%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .grid-container{
+    grid-template-columns: 1% 98% 1%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .grid-container{
+    grid-template-columns: 0% 100% 0%;
+  }
+}
+
 .menu-row-container{
   display: grid;
   grid-row: 2;

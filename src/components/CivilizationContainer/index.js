@@ -29,13 +29,12 @@ export default class CivilizationContainer extends Component {
       <tbody>
         <tr>
           <td className="icon"><img className="civ-icon" src={this.state.civ.leaderImg}/></td>
-          <td className="leader">{this.state.civ.leader}</td>
+          <td className="leader"><p>{this.state.civ.leader}</p></td>
           <td className="icon"><img className="civ-icon" src={this.state.civ.iconImg}/></td>
-          <td className="civilization"> {this.state.civ.civilization} </td>
+          <td className="civilization"><p>{this.state.civ.civilization}</p></td>
           <td id="checkbox">
             <label className="checkbox-container" onChange = {this.onChange.bind(this)}>
-                <input type="checkbox"/>
-                <span></span>
+              <input type="checkbox"/>
             </label>
           </td>
         </tr>
