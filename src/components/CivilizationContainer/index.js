@@ -28,10 +28,10 @@ export default class CivilizationContainer extends Component {
     return (
       <tbody>
         <tr>
-          <td id="icon"><img className="civ-icon" src={this.state.civ.leaderImg}/></td>
-          <td id="leader">{this.state.civ.leader}</td>
-          <td id="icon"><img className="civ-icon" src={this.state.civ.iconImg}/></td>
-          <td id="civilization"> {this.state.civ.civilization} </td>
+          <td className="icon"><img className="civ-icon" src={this.state.civ.leaderImg}/></td>
+          <td className="leader">{this.state.civ.leader}</td>
+          <td className="icon"><img className="civ-icon" src={this.state.civ.iconImg}/></td>
+          <td className="civilization"> {this.state.civ.civilization} </td>
           <td id="checkbox">
             <label className="checkbox-container" onChange = {this.onChange.bind(this)}>
                 <input type="checkbox"/>
