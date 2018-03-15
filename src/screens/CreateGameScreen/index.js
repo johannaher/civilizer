@@ -52,7 +52,7 @@ export default class CreateGameScreen extends Component {
     }
     return (
 
-        <GridContainer>
+        <GridContainer location="Create">
 
           <Header label= "Choose Contending Players" />
           <GamePlayersContainer userList = {this.state.userList} selectedUsers = {this.state.selectedUsers}/>

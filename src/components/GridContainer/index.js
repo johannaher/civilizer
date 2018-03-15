@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 
 export default class GridContainer extends Component {
 
+
   render() {
     return (
       <div className = "grid-container">
@@ -18,16 +19,24 @@ export default class GridContainer extends Component {
 
         <div className = "menu-row-container">
 
-        <Link to={{pathname: "/CreateGameScreen",}} style={{ textDecoration: 'none' }}>
-          <div className = "menu-button"><p>New</p></div>
+        <Link to={{pathname: "/CreateGameScreen",}} style={{
+          textDecoration: 'none',
+        }}>
+          <div style={{
+            color:(this.props.location==='Create') ? 'white' : 'black',
+          }} className = "menu-button"><p>New</p></div>
         </Link>
 
           <Link to={{pathname: "/Games",}} style={{ textDecoration: 'none' }}>
-            <div className = "menu-button"><p>Games</p></div>
+            <div style={{
+              color:(this.props.location==='PreviousGames') ? 'white' : 'black',
+            }} className = "menu-button"><p>Games</p></div>
           </Link>
 
           <Link to={{pathname: "/",}} style={{ textDecoration: 'none' }}>
-            <div className = "menu-button"><p>Highscore</p></div>
+            <div style={{
+              color:(this.props.location==='home') ? 'white' : 'black',
+            }} className = "menu-button"><p>Highscore</p></div>
           </Link>
 
           <ProfileContainer/>
