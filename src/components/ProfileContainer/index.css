@@ -1,5 +1,5 @@
 .profile-container{
-  background-color: #9A150E;
+  background-color: #173B61;
 }
 
 .profile-container p{
@@ -10,4 +10,17 @@
   font-weight: bold;
   color: white;
   text-align: right;
+  text-decoration: none;
+}
+
+.link-color{
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+  text-decoration: none;
+}
+
+.link-color:hover{
+  opacity: 0.8;
 }

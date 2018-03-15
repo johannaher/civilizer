@@ -30,7 +30,7 @@ export default class GridContainer extends Component {
 
         <Link to={{pathname: "/",}} style={{ textDecoration: 'none' }}>
           <div style={{
-            color:(this.props.location==='home') ? 'white' : 'black',
+            color:(this.props.location==='home') ? 'white' : '#9A150E',
           }} className = "menu-button"><p>Highscores</p></div>
         </Link>
 
@@ -38,13 +38,13 @@ export default class GridContainer extends Component {
           textDecoration: 'none',
         }}>
           <div style={{
-            color:(this.props.location==='Create') ? 'white' : 'black',
+            color:(this.props.location==='Create') ? 'white' : '#9A150E',
           }} className = "menu-button"><p>New Game</p></div>
         </Link>
 
         <Link to={{pathname: "/Games",}} style={{ textDecoration: 'none' }}>
           <div style={{
-            color:(this.props.location==='PreviousGames') ? 'white' : 'black',
+            color:(this.props.location==='PreviousGames') ? 'white' : '#9A150E',
           }} className = "menu-button"><p>Previous Games</p></div>
         </Link>
 
