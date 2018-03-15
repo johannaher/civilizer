@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './styles.css'
 import ChoiceListItem from '../ChoiceListItem'
+import Headers from '../../../../components/Headers'
 
 export default class Choice extends Component {
 
@@ -31,13 +32,13 @@ export default class Choice extends Component {
   render(){
     return(
       <div className="user-choice-container">
-      <h2 className="user-choice-name">{this.props.name}</h2>
-      <div className="user-choice-choices">
-      {this.props.choices.map((choice)=>{
-        return <ChoiceListItem callback={this.onChoice.bind(this)} selected={this.state.selected} {...choice} />
-      })}
-      </div>
-      <label className="score-label" >SCORE: <input type="text" className="score-input" value={this.state.score} onChange={this.handleInput.bind(this)}/> </label>
+        <Headers label={this.props.name}/>
+        <div className="user-choice-choices">
+          {this.props.choices.map((choice)=>{
+            return <ChoiceListItem callback={this.onChoice.bind(this)} selected={this.state.selected} {...choice} />
+          })}
+        </div>
+        <p className="score-label" >SCORE: <input type="text" className="score-input" value={this.state.score} onChange={this.handleInput.bind(this)}/></p>
       </div>
     )
   }

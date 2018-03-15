@@ -4,11 +4,15 @@
 }
 
 .user-choice-choices {
+
 }
 
 .score-label {
   font-size: 24px;
   margin-left: 20px;
+  background-color: black;
+  color:white;
+  padding: 10px;
  }
 
 .score-input {
@@ -16,6 +20,8 @@
   border: 1px solid transparent;
   font-size: 24px;
   background-color: transparent;
+  color:white;
+  width:80%;
 }
 
 .score-input:focus {
