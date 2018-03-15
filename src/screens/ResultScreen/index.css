@@ -1,3 +1,9 @@
 .errorText {
   text-align: center;
 }
+
+.noSubmit {
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+}

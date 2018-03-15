@@ -81,6 +81,7 @@ export default class ResultsScreen extends Component {
         })}
         <p className="errorText">{this.state.errorText}</p>
         <Link to='/'><div onClick={()=>this.submitScores()}><Button label="SUBMIT"/></div></Link>
+        <Link to='/'><p className="noSubmit">I don´t want to submit score</p></Link>
       </GridContainer>
     );
   }
