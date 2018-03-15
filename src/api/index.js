@@ -38,6 +38,7 @@ export const games = (callback) =>{
 export const highScores = (callback) =>{
   axios.get(url + '/scores/high', config).then((res) => {
     callback(res.data)
+    return;
   })
 }
 
