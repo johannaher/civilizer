@@ -5,17 +5,21 @@
   border-radius: 50%;
 }
 
-#icon{
+.icon{
   width: 5%;
+  padding-left: 14px;
+  padding: 10px;
 }
 
-#civilization{
+.civilization{
   width: 30%;
   text-transform: uppercase;
+  padding-left: 24px;
 }
 
-#leader{
+.leader{
   width: 30%;
+  padding-left: 24px;
 }
 
 #ability{

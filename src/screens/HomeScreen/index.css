@@ -15,29 +15,17 @@
 #background2-img{
   background-image: url(../../assets/images/Magnus.png);
   background-repeat: no-repeat;
+  overflow-x: visible;
+  overflow-y: hidden;
   height: 35vh;
+}
+
+#background3-none{
+  background-color: transparent;
 }
 
 .test{
   margin: -20px 0;
   display: grid;
   grid-template-columns: 25% 50% 25%;
-}
-
-.figure-image #Magnus{
-  background-image: url(../../assets/images/Magnus.png);
-}
-
-.figure-image #Gov{
-  background-image: url(../../assets/images/Gov.png);
-}
-
-.header-banner{
-  background-color: black;
-  font-size:27px;
-  font-family: 'Quicksand',sans-serif;
-  color: white;
-  text-align: center;
-  height: 30px;
-  margin-bottom: -20px;
 }

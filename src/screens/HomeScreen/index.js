@@ -8,6 +8,7 @@ import { Redirect } from 'react-router-dom'
 import FlatButton from 'material-ui/FlatButton'
 import {orange500, blue500} from 'material-ui/styles/colors'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import Headers from '../../components/HeaderContainer'
 
 export default class HomeScreen extends Component {
 
@@ -18,13 +19,14 @@ export default class HomeScreen extends Component {
           <div className=" test">
             <div className="grid-item" id="background2-img">
             </div>
-            <div className="grid-item">
+            <div className="grid-item" id="background3-none">
               <ButtonComponent href = "/creategamescreen" label = "New Game"></ButtonComponent>
             </div>
             <div className="grid-item" id="background-img">
             </div>
           </div>
-          <div className="header-banner"> HIGHSCORES</div>
+          <Headers label="HIGHSCORES"/>
+          
           <Scoreboard/>
           <ButtonComponent href="/games" label ="Previous games and scores"> </ButtonComponent>
         </div>
