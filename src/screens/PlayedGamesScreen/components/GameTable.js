@@ -12,16 +12,11 @@ export default class GameTable extends Component {
       <div>
 
         <HeaderContainer label= {moment(this.props.timestamp).format("Do MMMM YYYY")} />
-        <div>
           {this.props.scores.map((playerInfo, index)=>{
             return (
-              <div>
-                <p>#{index + 1}</p>
-                <GameTableItem playerInfo = {playerInfo}/>
-              </div>
+              <GameTableItem playerInfo = {playerInfo} rank={index+1}/>
             );
           })}
-        </div>
       </div>
     );
   }

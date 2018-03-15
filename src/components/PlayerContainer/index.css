@@ -8,12 +8,10 @@
   overflow: hidden;
   object-fit: contain;
   background-color: black;
-  margin-top:12px;
+  margin-top:5%;
 }
 
 .player-container p{
-  font-size: 17px;
-  font-family: 'Quicksand', sans-serif;
   display: inline-block;
   color: white;
   margin-right: 5px;
@@ -35,8 +33,6 @@
   width: 80%;
   position: relative;
   margin: 12px;
-  justify-self: center;
-
 }
 
 .display-name{
