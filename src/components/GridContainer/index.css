@@ -31,7 +31,7 @@
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 400px) {
   .grid-container{
     grid-template-columns: 0% 100% 0%;
   }

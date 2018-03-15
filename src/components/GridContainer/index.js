@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Style from './index.css'
 import ProfileContainer from '../ProfileContainer'
-import ButtonComponent from '../../components/Buttons'
 import {Link} from 'react-router-dom'
+import {Helmet} from "react-helmet";
 
 export default class GridContainer extends Component {
 
@@ -10,6 +10,14 @@ export default class GridContainer extends Component {
   render() {
     return (
       <div className = "grid-container">
+
+        <Helmet>
+          <title> 'Civilizer'</title>
+          <meta name = 'description' content = 'Civilizer lets you setup player configurations for Sid Meiers Civilization 6.'/>
+          <link rel = 'canonical' href = 'localhost:3000'/>
+          <meta charset = 'utf-8'/>
+          <meta name = 'keywords' content = 'Civ, civilization, multiplayer, score, sid meier'/>
+        </Helmet>
 
         <div className = "header-container">
           <a href = "/">
