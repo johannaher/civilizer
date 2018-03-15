@@ -12,9 +12,10 @@ import Headers from '../../components/HeaderContainer'
 
 export default class HomeScreen extends Component {
 
+
   render() {
     return (
-      <GridContainer>
+      <GridContainer location="home">
         <div className = "home-container">
           <div className=" test">
             <div className="grid-item" id="background2-img">
@@ -26,7 +27,7 @@ export default class HomeScreen extends Component {
             </div>
           </div>
           <Headers label="HIGHSCORES"/>
-          
+
           <Scoreboard/>
           <ButtonComponent href="/games" label ="Previous games and scores"> </ButtonComponent>
         </div>

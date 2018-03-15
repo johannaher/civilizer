@@ -60,13 +60,13 @@ export default class ResultsScreen extends Component {
   render() {
     if(this.state.users.length < 1 || this.state.civilizations.length < this.state.users.length){
       return(
-        <GridContainer>
+        <GridContainer location="Results">
           <p className="errorText">Too few users or civilizations to randomize!</p>
           <div className="g-background"> </div>
         </GridContainer>)
     }
     return (
-      <GridContainer>
+      <GridContainer location="Create">
         <Header label="Randomized Civilizations to Player"/>
         {this.state.results.map((result, index) => {
           return <Choice results={this.state.results} key={index} index={index} {...result} />
