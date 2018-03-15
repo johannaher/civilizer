@@ -5,6 +5,7 @@ import GameTable from './components/GameTable'
 import { Redirect, Link } from 'react-router-dom'
 import { games } from '../../api'
 import Button from '../../components/Buttons'
+import Headers from '../../components/Headers'
 
 export default class PlayedGameScreen extends Component {
 
@@ -30,6 +31,7 @@ export default class PlayedGameScreen extends Component {
   render() {
     return (
       <GridContainer>
+        <Headers label="Previous Game Results"/>
         {this.state.games.map((game) => {
           return<GameTable {...game}/>
         })}
