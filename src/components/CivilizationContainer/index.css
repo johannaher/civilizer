@@ -1,31 +1,30 @@
 .civ-icon{
-  width:100%;
+  width: 100%;
   max-width: 90px;
   background-color: #173B61;
   border-radius: 50%;
+  min-width: 56px;
 }
 
 .icon{
   width: 5%;
-  padding-left: 14px;
+  max-width: 90px;
+  min-width: 56px;
   padding: 10px;
 }
 
 .civilization{
   width: 30%;
-  text-transform: uppercase;
-  padding-left: 24px;
+  padding-left: 1%;
+  padding-right: 0%;
 }
 
 .leader{
   width: 30%;
-  padding-left: 24px;
-}
-
-#ability{
-  width: 30%;
+  padding-left: 1%;
 }
 
 #checkbox{
   width:5%;
+  padding-right: 1%;
 }
