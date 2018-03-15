@@ -1,12 +1,12 @@
 .confirm-button{
-    font-size: 35px;
+    font-size: 2em;
     font-family: 'Quicksand', sans-serif;
     font-weight: 100;
     letter-spacing: 3px;
     text-transform: uppercase;
     vertical-align: middle;
     text-align: center;
-    padding: 20px 50px;
+    padding: 4% 12%;
     display: inline-block;
     cursor: pointer;
     border-radius: 1px;
@@ -26,5 +26,4 @@
 
 .buttonContainer{
   text-align:center;
-  padding: 20px 0;
 }

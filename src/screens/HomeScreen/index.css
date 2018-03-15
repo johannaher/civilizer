@@ -2,31 +2,33 @@
   display: grid;
   grid-template-rows: 20% 80%;
   grid-template-columns: 1fr;
-
 }
 
-#background-img{
-  background-image: url(../../assets/images/Gov.png);
+.home-container img{
   background-repeat: no-repeat;
-  background-position: bottom;
-  height:35vh;
-}
-
-#background2-img{
-  background-image: url(../../assets/images/Magnus.png);
-  background-repeat: no-repeat;
-  overflow-x: visible;
-  overflow-y: hidden;
-  height: 35vh;
-}
-
-#background3-none{
   background-color: transparent;
+  height:35vh;
+  object-fit: contain;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+#bg1{
+  content: url(../../assets/images/Magnus.png);
+  left: 0px;
+}
+
+#bg2{
+  content: url(../../assets/images/Gov.png);
+  right: 0px;
 }
 
 .test{
-  margin: 0 0;
-  margin-bottom: -20px;
   display: grid;
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: 30% 40% 30%;
+}
+
+.button-container{
+  padding: 10% 0% 10% 0%;
 }

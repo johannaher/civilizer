@@ -21,7 +21,7 @@ export default class GridContainer extends Component {
 
         <div className = "header-container">
           <a href = "/">
-            <p className="top-header">CIVILIZER</p>
+            <h1 className="top-header">CIVILIZER</h1>
           </a>
         </div>
 
