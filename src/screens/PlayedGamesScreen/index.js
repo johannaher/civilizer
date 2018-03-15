@@ -31,7 +31,9 @@ export default class PlayedGameScreen extends Component {
   render() {
     return (
       <GridContainer location="PreviousGames">
-        <Headers label = "Previous Game Results"/>
+        <div class="a-background">
+          <Headers label = "Previous Game Results"/>
+        </div>
         {this.state.games.map((game) => {
           return<GameTable {...game}/>
         })}
