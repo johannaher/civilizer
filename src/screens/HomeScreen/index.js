@@ -8,9 +8,6 @@ import { Redirect } from 'react-router-dom'
 
 export default class HomeScreen extends Component {
   render() {
-    if(!sessionStorage.isLoggedIn){
-      return <Redirect to='/LoginScreen'/>
-    }
     return (
       <GridContainer>
 
