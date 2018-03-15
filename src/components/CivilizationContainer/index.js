@@ -25,7 +25,6 @@ export default class CivilizationContainer extends Component {
   }
 
   render() {
-
     return (
       <tbody>
         <tr>

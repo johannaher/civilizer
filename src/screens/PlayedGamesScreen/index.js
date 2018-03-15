@@ -6,6 +6,8 @@ import { Redirect, Link } from 'react-router-dom'
 import { games } from '../../api'
 import Button from '../../components/Buttons'
 import Headers from '../../components/Headers'
+import CircularProgress from 'material-ui/CircularProgress';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 export default class PlayedGameScreen extends Component {
 
@@ -13,6 +15,7 @@ export default class PlayedGameScreen extends Component {
     super(props)
     this.state = {
       games: [],
+      fetchSuccess: false,
     }
   }
 
@@ -22,21 +25,40 @@ export default class PlayedGameScreen extends Component {
 
   setGames(data){
     if(data.success){
-      this.setState({games: data.games})
+      this.setState({
+        games: data.games,
+        fetchSuccess: true,
+      })
     } else {
       console.log("Didn't get any games ", data.message)
     }
   }
 
-  render() {
-    return (
-      <GridContainer location="PreviousGames">
-        <Headers label = "Previous Game Results"/>
-        {this.state.games.map((game) => {
+  games(){
+    if(this.state.fetchSuccess) {
+      return (
+        this.state.games.map((game) => {
           return<GameTable {...game}/>
-        })}
-        <Button label="HOME" href='/'/>
-      </GridContainer>
-    );
+        })
+      )
+    } else {
+      return(
+        <div className="loadingContainer">
+        <MuiThemeProvider>
+        <CircularProgress size={60} thickness={7} />
+        </MuiThemeProvider>
+        </div>
+      )
+    }
+  }
+
+  render() {
+      return (
+        <GridContainer location="PreviousGames">
+          <Headers label = "Previous Game Results"/>
+          {this.games()}
+          <Button label="HOME" href='/'/>
+        </GridContainer>
+      );
   }
 }
