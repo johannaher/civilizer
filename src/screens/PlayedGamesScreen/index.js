@@ -29,9 +29,6 @@ export default class PlayedGameScreen extends Component {
 
   render() {
     console.log(this.props.games);
-    if(sessionStorage.isLoggedIn==='false'){
-      return <Redirect to='/LoginScreen'/>
-    }
     return (
       <GridContainer>
 

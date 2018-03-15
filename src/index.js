@@ -12,14 +12,32 @@ import registerServiceWorker from './registerServiceWorker';
 const App = () => (
     <Router>
       <div>
-        <Route exact path = "/" component={HomeScreen}/>
-        <Route path = "/CreateGameScreen" component={CreateGameScreen}/>
-        <Route path = "/LoginScreen" component={LoginScreen}/>
-        <Route path = "/Results" component={Results}/>
-        <Route path = "/Games" component={GameScores}/>
+        <Route exact path = "/" render={()=>{ return handleRoute(<HomeScreen/>)}}/>
+        <Route path = "/CreateGameScreen" render={()=>{ return handleRoute(<CreateGameScreen/>)}}/>
+        <Route path = "/LoginScreen" render={()=>handleLoginRoute()}/>
+        <Route path = "/Results" render={(obj)=>handleRoute(<Results {...obj}/>)}/>
+        <Route path = "/Games" render={()=>handleRoute(<GameScores/>)}/>
       </div>
     </Router>
   )
+
+
+const handleRoute = (component) => {
+  if(sessionStorage.isLoggedIn==='true'){
+    return component
+  } else {
+    return <Redirect to='/LoginScreen'/>
+  }
+}
+
+const handleLoginRoute = () => {
+  if(sessionStorage.isLoggedIn==='true'){
+    return  <Redirect to='/'/>
+  } else {
+    return <LoginScreen/>
+  }
+}
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

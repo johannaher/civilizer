@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link, withRouter } from 'react-router-dom'
 import style from './styles.css'
 import TextField from 'material-ui/TextField'
 import FlatButton from 'material-ui/FlatButton'
@@ -7,7 +7,7 @@ import {orange500, blue500} from 'material-ui/styles/colors'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { login } from '../../api'
 
-export default class LoginScreen extends Component {
+class LoginScreen extends Component {
 
   constructor(props){
     super(props)
@@ -46,16 +46,13 @@ export default class LoginScreen extends Component {
       sessionStorage.setItem('name', res.name)
       sessionStorage.setItem('id', res.id)
       sessionStorage.setItem('imgUrl', res.imgUrl)
-
+      this.props.history.push('/');
     } else {
       this.setState({dbError: res.message})
     }
   }
 
   render() {
-      if(sessionStorage.isLoggedIn==='true'){
-        return <Redirect to='/'/>
-      }
       return (
         <div className="login-screen">
           <MuiThemeProvider>
@@ -87,6 +84,8 @@ export default class LoginScreen extends Component {
       );
   }
 }
+
+export default withRouter(LoginScreen)
 
 const styles = {
   errorStyle: {
