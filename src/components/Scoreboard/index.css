@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 1px;
-  background-color: #aaa;
   padding: 1px;
   margin: 20px 50px 20px 50px;
 }
@@ -10,11 +9,23 @@
 .scoreboard-item{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   color: #dda833;
   text-align: center;
   background-color: #f3f3f3;
+  border-bottom: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
 }
 
 .scoreboard-item p{
   font-size: 1em;
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20em;
+  flex:1;
 }

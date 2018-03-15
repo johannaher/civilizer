@@ -32,7 +32,6 @@ export default class CivilizationContainer extends Component {
           <td id="leader">{this.state.civ.leader}</td>
           <td id="icon"><img className="civ-icon" src={this.state.civ.iconImg}/></td>
           <td id="civilization"> {this.state.civ.civilization} </td>
-          <td id="ability">(founding father ex)</td>
           <td id="checkbox">
             <label className="checkbox-container" onChange = {this.onChange.bind(this)}>
                 <input type="checkbox"/>

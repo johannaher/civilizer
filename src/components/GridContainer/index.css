@@ -6,10 +6,39 @@
 }
 
 .center-container{
+  display: grid;
   grid-column: 2;
   background-color: #f3f3f3;
-  padding: 20px;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 95%;
+}
+
+.menu-row-container{
+  display: grid;
+  align-items: start;
+  justify-content: center;
+  grid-template-columns: 25% 25% 25% 25%;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 1px;
+  background-color: #dda833;
+}
+
+.menu-button{
+  font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center center;
+  transition-property: color, border-color, background-color, opacity, -webkit-box-shadow;
+  transition-duration: 0.25s;
+  color: #232323;
+  background-color: #dda833;
+  height: 100%;
+}
+
+.menu-button:hover{
+  background-color: #9A150E;
+  color: white;
 }
 
 .header-container{

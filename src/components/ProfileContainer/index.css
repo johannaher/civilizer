@@ -1,0 +1,13 @@
+.profile-container{
+  text-align: center;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.profile-container p{
+  font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
