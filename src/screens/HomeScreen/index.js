@@ -30,6 +30,7 @@ export default class HomeScreen extends Component {
           <div className="header-banner"> HIGHSCORES</div>
           <Scoreboard/>
 
+          <ButtonComponent href="/games" label ="Previous games and scores"> </ButtonComponent>
         </div>
 
         <Scoreboard/>
