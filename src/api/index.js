@@ -5,7 +5,7 @@ const url = "http://localhost:1337"
 const token = sessionStorage.getItem('token')
 const config = {
   params: {
-    token: token
+    token: sessionStorage.getItem('token')
   }
 }
 
@@ -35,10 +35,13 @@ export const games = (callback) =>{
   })
 }
 
-export const highScores = (callback) =>{
-  axios.get(url + '/scores/high', config).then((res) => {
+export const highScores = (callback) => {
+  axios.get(url + '/scores/high', {
+    params: {
+      token: sessionStorage.getItem('token')
+    }
+  }).then((res) => {
     callback(res.data)
-    return;
   })
 }
 
