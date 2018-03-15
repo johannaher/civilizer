@@ -53,7 +53,7 @@ export default class ResultsScreen extends Component {
     let time = moment().format()
     let success;
     this.state.results.map((result) => {
-      scoreAdd(this.state.gameId, result.id, result.decided, result.score, time, ()=>{})
+      scoreAdd(this.state.gameId, result.id, result.decided, result.score, time, (data)=>console.log("score", data))
     })
   }
 

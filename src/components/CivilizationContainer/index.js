@@ -7,19 +7,20 @@ export default class CivilizationContainer extends Component {
     super(props)
     this.state = {
       civ: this.props.civ,
-      checked: {},
+      checked: props.defaultCheck,
     }
   }
 
-  onChange (){
-    this.setState({checked: !this.state.checked})
+  onChange(){
     if(this.state.checked){
       this.props.selectedCivs.push(this.state.civ)
+      this.setState({checked: true})
     } else {
       var index = this.props.selectedCivs.indexOf(this.props.civ)
       if(index > -1){
         this.props.selectedCivs.splice(index, 1)
       }
+      this.setState({checked: false})
     }
   }
 
