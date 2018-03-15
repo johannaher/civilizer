@@ -21,21 +21,21 @@ export default class ResultsScreen extends Component {
   constructor(props){
     super(props)
     this.state = {
-
       results: [],
       gameId: uuidv4(),
       users: props.location.state.users,
       civilizations: props.location.state.civilizations,
-      results: [],
+      results: this.randomize(props.location.state.users, props.location.state.civilizations),
       successfulSubmit: false,
     }
   }
 
-  randomize(){
-    let shuffledCivs = shuffle(this.state.civilizations)
-    let nrOfChoices = Math.floor(this.state.civilizations.length/this.state.users.length)
+  randomize( users, civilizations ){
+    let shuffledCivs = shuffle(civilizations)
+    let nrOfChoices = Math.floor(civilizations.length/users.length)
     let index = 0;
-    this.state.users.map((user)=>{
+    let results = [];
+    users.map((user)=>{
       user.choices = []
       user.decided = null
       user.score = 0;
@@ -43,13 +43,11 @@ export default class ResultsScreen extends Component {
         user.choices.push(shuffledCivs[index])
         index++
       }
-      this.state.results.push(user)
+      results.push(user)
     })
+    return results;
   }
 
-  componentWillMount(){
-    this.randomize()
-  }
 
   submitScores(){
     let time = moment().format()
@@ -65,14 +63,13 @@ export default class ResultsScreen extends Component {
       return <Redirect to='/LoginScreen'/>
     }
     if(this.state.users.length < 1 || this.state.civilizations.length < this.state.users.length){
-      return(<p className="errorText">Too few users or civilizations to radomize!</p>)
+      return(
+        <GridContainer>
+        <p className="errorText">Too few users or civilizations to randomize!</p>
+        </GridContainer>)
     }
     return (
       <GridContainer>
-        {this.state.results.map((result) => {
-          return <Choice {...result} />
-        })}
-
         {this.state.results.map((result, index) => {
           return <Choice results={this.state.results} key={index} index={index} {...result} />
         })}
