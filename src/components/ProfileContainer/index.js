@@ -24,7 +24,6 @@ export default class PlayerContainer extends Component {
 
       <div className="profile-container">
         <p>{this.state.userName}</p>
-        <br/>
         <Link to='/LoginScreen' onClick={()=>this.logout()}>Sign out</Link>
       </div>
 

@@ -8,34 +8,35 @@
 .center-container{
   display: grid;
   grid-column: 2;
+  grid-row: 3;
   background-color: #f3f3f3;
   grid-template-columns: 1fr;
-  grid-template-rows: 10% 90%;
 }
 
 .menu-row-container{
   display: grid;
   grid-row: 2;
   grid-column: 2;
-  align-items: start;
-  justify-content: center;
   grid-template-columns: 25% 25% 25% 25%;
   font-family: 'Quicksand', sans-serif;
-  border-radius: 1px;
   background-color: #dda833;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.menu-row-container p{
+  font-size: 1em;
+  text-decoration: none;
 }
 
 .menu-button{
-  font-size: 1em;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center center;
   transition-property: color, border-color, background-color, opacity, -webkit-box-shadow;
   transition-duration: 0.25s;
   color: #232323;
-  background-color: #dda833;
+  width: 100%;
   height: 100%;
+  padding-top: 0.5em;
 }
 
 .menu-button:hover{
