@@ -35,7 +35,7 @@ export default class PlayedGameScreen extends Component {
         {this.state.games.map((game) => {
           return<GameTable {...game}/>
         })}
-        <Link to='/'><Button label="HOME"/></Link>
+        <Button label="HOME" href='/'/>
       </GridContainer>
     );
   }
