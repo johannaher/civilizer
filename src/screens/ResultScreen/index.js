@@ -58,14 +58,10 @@ export default class ResultsScreen extends Component {
   }
 
   render() {
-    console.log(this.state)
-    if(sessionStorage.isLoggedIn==='false'){
-      return <Redirect to='/LoginScreen'/>
-    }
     if(this.state.users.length < 1 || this.state.civilizations.length < this.state.users.length){
       return(
         <GridContainer>
-          <p className="errorText">Too few users or civilizations to randomize!</p>
+          <p className="errorText">Too few users or civilizations to randomize!</p> 
           <div className="g-background"> </div>
         </GridContainer>)
     }

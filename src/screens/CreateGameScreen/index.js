@@ -44,9 +44,7 @@ export default class CreateGameScreen extends Component {
   }
 
   render() {
-    if(!sessionStorage.isLoggedIn){
-      return <Redirect to='/LoginScreen'/>
-    }
+
     if(this.state.civilizationList.length <= 0){
       console.log ("Empty civilizationsList")
     }
