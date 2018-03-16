@@ -35,7 +35,7 @@ export default class Scoreboard extends Component {
       return( this.state.scoreList.map((highScore,index)=>{
         return(
           <div className = "scoreboard-item">
-            
+
             {(index===0) ? <div className="star"> <p>#{index + 1}</p> </div> : <p>#{index + 1}</p>}
             <p><img className = "user-img" src={highScore.imgUrl}/>
             <br/>{highScore.name}</p>
