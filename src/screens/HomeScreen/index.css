@@ -2,26 +2,23 @@
   display: grid;
   grid-template-rows: 20% 80%;
   grid-template-columns: 1fr;
+  overflow: hidden;
 }
 
 .home-container img{
   background-repeat: no-repeat;
   background-color: transparent;
-  height:35vh;
   object-fit: contain;
-  position: relative;
-  top: 0px;
-  width: 100%;
 }
 
 #bg1{
   content: url(../../assets/images/Magnus.png);
-  left: 0px;
+  width: 100%;
 }
 
 #bg2{
   content: url(../../assets/images/Gov.png);
-  right: 0px;
+  height: 100%;
 }
 
 .test{
